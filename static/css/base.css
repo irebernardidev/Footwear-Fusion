@@ -71,6 +71,13 @@ nav {
     top: -10px;
 }
 
+/* Products Page */
+.card {
+    width: 15rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
 /* --------- MEDIA QUERIES --------- */
 /* Adjust container width for extra-large (xl) screens */
 @media screen and (min-width: 1200px) {
