@@ -39,6 +39,10 @@ nav {
     background-color: #84A59D;
 }
 
+.navbar-offset {
+    padding-top: 183px;
+}
+
 /* Hero */
 
 .text-hero {
@@ -95,8 +99,17 @@ nav {
         position: relative; 
         top: 2px;
     }
-
     .navbar-toggler {
         z-index: 2; /* Keep menu button above other elements */
+    }
+    .navbar-offset {
+        padding-top: 113px;
+    }
+}
+
+/* Very small mobile */
+@media screen and (max-width: 355px) {
+    .navbar-offset {
+        padding-top: 155px;
     }
 }
