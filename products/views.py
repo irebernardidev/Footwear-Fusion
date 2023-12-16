@@ -8,8 +8,8 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
     query = None
-    categories = None
-    subcategories = None
+    categories = Category.objects.all()
+    subcategories = Subcategory.objects.all()
     sort = None
     direction = None
     var_category = None
@@ -73,8 +73,11 @@ def all_products(request):
         'var_subcategory': var_subcategory,
     }
     
-    print(var_category)
-    print(var_subcategory)
+    print("var_category: ", var_category)
+    print("var_subcategory: ", var_subcategory)
+    print("current_categories: ", categories)
+    print("current_subcategories: ", subcategories)
+    print("sorting: ", sort)
     return render(request, 'products/products.html', context)
 
 
