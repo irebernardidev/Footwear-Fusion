@@ -3,7 +3,6 @@
         <div class="logo"></div>
     </a>
 </div>
-
 <ul class="list-inline ms-auto mb-0">
     <li class="list-inline-item p-0">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +51,7 @@
         </a>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center d-flex align-items-center">
                 <span class="material-icons">shopping_bag</span>
                 {% if grand_total %}

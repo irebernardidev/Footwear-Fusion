@@ -94,7 +94,7 @@
                         </li>
                         <!-- Shopping Bag Link -->
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center d-flex align-items-center">
                                     <span class="material-icons">shopping_bag</span>
                                     {% if grand_total %}
