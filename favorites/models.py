@@ -4,9 +4,7 @@ from products.models import Product
 
 
 class Favorites(models.Model):
-    user = models.OneToOneField(
-        User, null=False, blank=False,
-        on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(
         Product, default="", through='FavoritesItem')
 
