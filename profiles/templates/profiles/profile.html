@@ -102,6 +102,11 @@
                             <div class="col-12 col-md-8 mx-auto">
                                 {% for order in orders %}
                                     {% for item in order.lineitems.all %}
+                                    {% if item.product in reviews.all %}
+                                        {% endif %}
+                                        <p>{{ reviews.all }}</p>
+                                        <p>{{ item.product }}</p>
+
                                         <div class="row my-5">
                                             <div class="col-6">
                                                 <a href="{% url 'product_detail' item.product.id %}" class="d-flex justify-content-end">

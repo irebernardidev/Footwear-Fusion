@@ -39,6 +39,7 @@ def add_to_favorites(request, item_id):
     favorites, created = Favorites.objects.get_or_create(user=request.user)
     
     if FavoritesItem.objects.filter(favorites=favorites, product=product).exists():
+         # if product in favorites.products.all():
         messages.error(request, f'{product.name} is already in your favorites')
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:

@@ -1,18 +1,24 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-
+from django.contrib import messages
+from django.urls import reverse
 from products.models import Product
 from profiles.models import UserProfile
-
-
+from checkout.models import Order, OrderLineItem
+from .models import Review
+from .forms import ReviewForm
 
 def product_reviews(request, product_id):
     """ A view to show individual product reviews"""
     
-    reviews = get_object_or_404(Reviews, pk=product_id)
+    reviews = Review.objects.filter(product__id__in=product_id)
+    product = get_object_or_404(Product, pk=product_id)
+
     context = {
         'reviews': reviews,
+        'product': product,
     }
+    print(reviews)
     return render(request, 'reviews/product_reviews.html', context)
 
 @login_required
@@ -21,14 +27,33 @@ def add_review(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
+    
+    review = Review.objects.filter(product=product).filter(user=user)
+    if review:
+        messages.error(request, "You've already added a review for this item. You can edit your review")
+        return render(request, 'home/index.html')
 
     if request.method == 'POST':
         form_data = {
-            'ratings': request.POST['ratings'],
-            'comments': request.POST['comments'],
+            'rating': request.POST['rating'],
+            'review_text': request.POST['review_text'],
         }
-    context = {
-        'product': product,
-    }
+        form = ReviewForm(form_data)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = user
+            review.product = product
+            form.save()
+            messages.success(request, f'Your review for {product.name} is added successfully')
+            return redirect(reverse('product_detail', args=[product.id]))
 
-    return render(request, 'reviews/add_review.html', context)
+    else:
+        form = ReviewForm()
+        context = {
+            'product': product,
+            'form': form,
+            'user_profile': user,
+            'review': review,
+            'on_review_page': True,
+        }
+        return render(request, 'reviews/add_review.html', context)
