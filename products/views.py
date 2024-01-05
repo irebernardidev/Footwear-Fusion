@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Subcategory
 from favorites.models import Favorites, FavoritesItem
+from reviews.models import Review
+from .models import Product, Category, Subcategory
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -95,15 +97,18 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 def product_detail(request, product_id):
-    """ A view to show individual product details"""
+    """ A view to show individual product details and the reviews"""
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product__id__in=product_id)
+
     sizes_women = range(36, 44)
     sizes_men = range(40, 47)
     sizes_kids = range(23, 36)
 
     context = {
         'product': product,
+        'reviews': reviews,
         'sizes_women': sizes_women,
         'sizes_men': sizes_men,
         'sizes_kids': sizes_kids,

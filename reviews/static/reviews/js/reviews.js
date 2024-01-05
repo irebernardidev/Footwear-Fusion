@@ -8,8 +8,30 @@ function getStars(stars) {
     }
     return output.join('');
 }
+let starClass = $('.star-rating');
+console.log(getStars(4));
+
+$.fn.stars = function() {
+    return $(this).each(function() {
+        const numberOfStars = $(this).data("rating");
+        $(this).html = getStars(numberOfStars)
+    });
+}
+/*
+$(function(){
+    $('.stars').stars();
+});
+$.each($('.star-rating'), function() {
+    numberOfStars = $(this).data('rating');
+    $(this).html = getStars(numberOfStars)
+});
 
 $('.star-rating').each(function() {
     numberOfStars = $(this).data('rating');
     $(this).html = getStars(numberOfStars)
 })
+*/
+
+/* Prepopulate star rating on Edit Review Page */
+const editStars = $('#edit-rating').data("editstars");
+$( '#edit-rating input[ value=' + editStars + ']' ).attr('checked', 'checked');
