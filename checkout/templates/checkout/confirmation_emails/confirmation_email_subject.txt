@@ -1,0 +1,1 @@
+Footwear Fusion Confirmation for Order Number {{ order.order_number }}
