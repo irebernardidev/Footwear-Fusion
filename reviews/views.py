@@ -7,8 +7,10 @@ from profiles.models import UserProfile
 from checkout.models import Order, OrderLineItem
 from .models import Review
 from .forms import ReviewForm
+
+
 def product_reviews(request, product_id):
-    """ A view to show individual product reviews"""
+    """ View to show individual product reviews"""
     #reviews = get_object_or_404(Review, pk=product_id)
     reviews = Review.objects.filter(product__id__in=product_id)
     product = get_object_or_404(Product, pk=product_id)
@@ -19,9 +21,11 @@ def product_reviews(request, product_id):
     }
     print(reviews)
     return render(request, 'reviews/product_reviews.html', context)
+
+
 @login_required
 def add_review(request, product_id):
-    """ A view to add product review """
+    """ View to add product review """
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
     # If user already submitted review for this product
@@ -67,14 +71,14 @@ def add_review(request, product_id):
 
 @login_required
 def edit_review(request, review_id):
-    """ A view to edit product review """
+    """ View to edit product review """
 
     review = get_object_or_404(Review, pk=review_id)
     user = get_object_or_404(UserProfile, user=request.user)
 
     # Check if user authenticated to edit the review
     if user.id != review.user.id:
-        messages.error(request, 'You are not allowed to edit this review')
+        messages.error(request, 'You can only edit your own review')
         return render(request, 'home/index.html')
 
     # Submit rating and review
@@ -97,3 +101,21 @@ def edit_review(request, review_id):
     print(review)
 
     return render(request, 'reviews/edit_review.html', context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ View to delete a review """
+
+    review = get_object_or_404(Review, pk=review_id)
+    user = get_object_or_404(UserProfile, user=request.user)
+
+    # Check if authenticated user created review being deleted
+    if user.id != review.user.id:
+        messages.error(request, 'You can only delete your own review')
+        return render(request, 'home/index.html')
+
+    review.delete()
+
+    messages.success(request, 'Review successfully deleted!')
+    return redirect(reverse('product_detail', args=[review.product.id]))
