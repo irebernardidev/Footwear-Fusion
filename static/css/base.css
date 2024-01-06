@@ -1,6 +1,7 @@
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #fff;
+    line-height: 1.5;
 }
 
 .text-headings {
@@ -75,7 +76,7 @@ a {
 }
 
 .hero {
-    background: url('/media/hero.jpg') no-repeat center center fixed;
+    background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
     height: calc(100vh - 164px);
     margin-top: 167px;
@@ -94,6 +95,32 @@ a {
     transform: scale(1.5);
     position: relative;
     top: -10px;
+}
+
+.btn-bottom {
+    bottom: 10px;
+}
+
+.img-sale {
+    background: url('/media/sale-mobile.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: auto;
+}
+
+.img-accessories {
+    background: url('/media/accessories-promo.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: auto;
+}
+
+.bg-light-rose {
+    background-color: #F5CAC3;
+}
+
+footer {
+    font-size: 14px;
 }
 
 /* Products Page */
@@ -206,14 +233,15 @@ select option[value=""] {
     .container-xxl {
         max-width: 80%;
     }
+    .img-sale {
+        background: url('/media/sale-desktop.jpg') no-repeat center center;
+    }
 }
 
 /* Mobile and tablet */
 @media screen and (max-width: 991px) {
-   
-
     .hero {
-        background: url('/media/hero.jpg') no-repeat center center fixed;
+        background: url('/media/hero.jpg') no-repeat center center;;
         background-size: cover;
         height: calc(100vh - 109px);
         margin-top: 109px;
