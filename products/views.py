@@ -133,7 +133,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details and the reviews"""
     
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.filter(product__id__in=product_id)
+    reviews = Review.objects.filter(product=product_id)
     sizes_women = range(36, 44)
     sizes_men = range(40, 47)
     sizes_kids = range(23, 36)
