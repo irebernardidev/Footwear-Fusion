@@ -1,4 +1,6 @@
 from django import forms
+from .widgets import CustomClearableFileInput
+from django.utils.translation import gettext_lazy as _
 from .models import Product, Category, Subcategory
 
 
@@ -7,7 +9,19 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ('category', 'subcategory', 'sku',
+                  'name', 'has_sizes', 'price',
+                  'rating', 'image')
+        labels = {
+            'sku': _('SKU'),
+            'has_sizes': _('Has Sizes?'),
+        }
+        help_texts = {
+            'has_sizes': _('Choose YES for shoes and NO for accessories'),
+            'rating': _('Input rating from the manufacturer based on the quality. Default is 3.'),
+        }
+        
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput) 
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
