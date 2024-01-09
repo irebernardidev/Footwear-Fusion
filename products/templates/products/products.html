@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-lg-2 d-none d-lg-block">
                     <!-- SIDE NAVIGATION -->
                     <!-- If user chooses 'Women' or 'Men' or 'Kids' -->
@@ -42,9 +42,9 @@
                              {% for subcat in all_subcategories %}
                              {% if subcat.name in subcategories_exist %}
                                  <li class="nav-item">
-                                     <a class="nav-link text-capitalize pb-0 
+                                    <a class="nav-link pb-0  
                                          {% if var_subcategory == subcat.name %}fw-bold{% endif %} 
-                                         {% if subcat.name == 'sale' %}text-uppercase{% endif %} 
+                                         {% if subcat.name == 'sale' %}text-uppercase{% else %}text-capitalize{% endif%} 
                                          {% if subcat.name == 'sale' or subcat.name == 'accessories' or subcat.name == 'new_arrivals' %}mt-3{% endif %}" 
                                          href="{% url 'products' %}?category={{var_category}}&subcategory={{subcat}}">
                                          {{ subcat }}
@@ -154,7 +154,11 @@
                                 <div class="card-footer bg-white ps-0 pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="mb-0 text-start fw-bold">€{{ product.price }}</p>
+                                            <p class="mb-0 text-start fw-bold">€{{ product.price }} 
+                                                {% if product.subcategory.name == 'sale' %}
+                                                    <span class="badge bg-salmon">SALE!</span>
+                                                {% endif %}
+                                            </p>
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
@@ -180,8 +184,8 @@
          <!-- Load More Button -->
          {% if var_category == None and var_subcategory == None %}
          <div class="d-flex justify-content-center align-items-center">
-             <button id="load-more-button" class="btn btn-beige text-uppercase my-5 fw-bold">Load More Products</button>
-         </div>
+            <button id="load-more-button" class="btn btn-beige text-uppercase my-5 fw-bold">Load More Products</button>
+        </div>
          {% endif %}
          {{total_obj|json_script:"json-total"}}
 
@@ -265,7 +269,7 @@
             // Back to top button functionality
             $("#back-to-top").click(function(event) {
                 event.preventDefault();
-                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $("html, body").animate({ scrollTop: 0 });
                 return false;
             });
             // Turn Add to favorite button (heart icon) into red
