@@ -6,9 +6,9 @@ from products.models import Product
 from profiles.models import UserProfile
 from favorites.models import Favorites, FavoritesItem
 
-SUCCESS_FAV = 50
 
-# source: modified from a slack thread, conversation between Joe2308 and ckz8780
+# Defining a new custome message level
+SUCCESS_NO_BAG = 50
 
 @login_required()
 def view_favorites(request):
@@ -32,29 +32,35 @@ def view_favorites(request):
     }
     
     return render(request, 'favorites/favorites.html', context=context)
+
+
 @login_required()
 def add_to_favorites(request, item_id):
     """ Add a specified product to the favorites """
+    
     product = get_object_or_404(Product, pk=item_id)
     favorites, created = Favorites.objects.get_or_create(user=request.user)
     
     if FavoritesItem.objects.filter(favorites=favorites, product=product).exists():
-         # if product in favorites.products.all():
+    # if product in favorites.products.all():
         messages.error(request, f'{product.name} is already in your favorites')
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
     else:
         favorites.products.add(product)
-        messages.add_message(request, SUCCESS_FAV, f'{product.name} is added to your favorites')
+        messages.add_message(request, SUCCESS_NO_BAG, f'{product.name} is added to your favorites')
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-            
+
     return redirect(redirect_url)
+
+
 @login_required()
 def remove_from_favorites(request, item_id):
     """ Remove a specified product to the favorites """
-
+    
     product = get_object_or_404(Product, pk=item_id)
     favorites = Favorites.objects.get(user=request.user)
 
     favorites.products.remove(product)
-    messages.add_message(request, SUCCESS_FAV, f'{product.name} is removed from your favorites')
+    messages.add_message(request, SUCCESS_NO_BAG, f'{product.name} is removed from your favorites')
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
