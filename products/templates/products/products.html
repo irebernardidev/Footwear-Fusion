@@ -185,11 +185,22 @@
                     {% endif %}
                 </div>
                 <div class="col-12 col-lg-10">
-                    <h2 class="logo-font text-center">Products</h2>
+                    <div class="img-sale">
+                        <div class="row h-100 g-0">
+                            <div class="col-6"></div>
+                            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                                <div class="text-center text-white pe-3">
+                                    <h1 class="text-headings text-uppercase">Final Sale</h1>
+                                    <p>Up to 60% discount</p>
+                                    <a href="{% url 'products' %}?subcategory=sale" class="btn btn-beige btn-home">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="">
                         <div class="mb-3 d-flex flex-row">
                             <div class="flex-grow-1">
-                                <p class="text-muted mt-3 text-center text-md-start">
+                                <p class="text-muted mt-3 text-md-start">
                                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                                         <span class="small"><a href="{% url 'products' %}">Back to All Products</a> | </span>
                                     {% endif %}
@@ -197,8 +208,8 @@
                                 </p>
                             </div>
                             <!-- Sorting -->
-                            <div class="">
-                                <a class="nav-link" href="#" id="sortDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="mt-2">
+                                <a class="nav-link text-black" href="#" id="sortDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Sort by 
                                     <i class="fas fa-chevron-down"></i>
                                 </a>
@@ -230,6 +241,7 @@
                         </div>
                     </div>
                     
+                    <div class="row mt-md-5" id="product-wrapper">
                         {% for product in products %}
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card mx-auto">
@@ -284,11 +296,14 @@
                 </div>
             </div>
         </div>
-        <!-- Load More Button -->
-        <div class="d-flex justify-content-center align-items-center">
-            <button id="load-more-button" class="btn btn-beige text-uppercase my-5 fw-bold">Load More Products</button>
-        </div>
-        {{total_obj|json_script:"json-total"}}
+         <!-- Load More Button -->
+         {% if var_category == None and var_subcategory == None %}
+         <div class="d-flex justify-content-center align-items-center">
+             <button id="load-more-button" class="btn btn-beige text-uppercase my-5 fw-bold">Load More Products</button>
+         </div>
+         {% endif %}
+         {{total_obj|json_script:"json-total"}}
+
         <!-- Back to top button -->
         <a class="text-center" id="back-to-top" href="#">
             <div class="h-100 shadow-sm rounded-0 d-flex justify-content-center align-items-center">
@@ -299,24 +314,10 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    <script>
-        $(document).ready(function() {
-            // Back to top button functionality
-            $("#back-to-top").click(function(event) {
-                event.preventDefault();
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-                return false;
-            });
-
-            // Turn Add to favorite button (heart icon) into red
-            $('.fa-inverse').hover(function(){
-                $(this).toggleClass("text-danger");
-            });
-        });
-
+   <script>
+        
         // Load More Products, adapted from https://www.youtube.com/watch?v=t8luXilRnlE
         const total = JSON.parse(document.getElementById('json-total').textContent);
-
         function loadMoreProducts() {
             let _current_item = $('.card').length
             const content_container = document.getElementById("product-wrapper");
@@ -379,6 +380,21 @@
         $('#load-more-button').click(function () {
             loadMoreProducts();
         });
+        $(document).ready(function() {
+            // Back to top button functionality
+            $("#back-to-top").click(function(event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+            // Turn Add to favorite button (heart icon) into red
+            $('.fa-inverse').hover(function(){
+                $(this).toggleClass("text-danger");
+            });
+            $('.fa-inverse').click(function(){
+                $(this).focus();
+            });
+        });
     </script>
-
+    
 {% endblock %}

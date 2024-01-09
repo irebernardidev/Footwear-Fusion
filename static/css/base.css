@@ -55,6 +55,7 @@ a {
     border: 1px solid #644536
 }
 
+.nav-link,
 .navbar-light .navbar-nav .nav-link {
     color: #000;
     padding: 0.5rem;
@@ -160,11 +161,11 @@ footer {
 }
 
 #back-to-top {
-    background-color: #F5CAC3;
+    background-color: rgba(178, 103, 94, 0.7);
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 10px;
+    bottom: 50vh;
     right: 10px;
     cursor: pointer;
 }
