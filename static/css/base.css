@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #fff;
@@ -29,7 +30,7 @@ a {
     color: #fff;
 }
 
-/* Buttons */
+/* Button Styles */
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 0%;
@@ -59,6 +60,7 @@ a {
     border: 1px solid #644536
 }
 
+/* Navigation Styles */
 .nav-link,
 .navbar-light .navbar-nav .nav-link {
     color: #000;
@@ -78,11 +80,6 @@ a {
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,1);
     border: none;
-}
-
-
-#delivery-banner {
-    background-color: #84A59D;
 }
 
 .navbar-offset {
@@ -106,6 +103,7 @@ a {
     min-width: 8rem;
 }
 
+/* Link Hover Effects */
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus,
@@ -118,12 +116,23 @@ footer a:focus {
     color: #7a413b;
 }
 
+/* Footer Styles */
 footer {
     font-size: 14px;
 }
 
-/* Hero */
+.social-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: rgba(256, 256, 256, 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Hero Section Styles */
 .text-hero {
     font-size: 5rem;
 }
@@ -154,12 +163,14 @@ footer {
     bottom: 10px;
 }
 
+/* Home Page Button Style */
 .btn-home {
     letter-spacing: 2px;
     font-family: 'DM Serif Display', serif;
     text-transform: uppercase;
 }
 
+/* Image Styles for Sale and Accessories */
 .img-sale {
     background: url('/media/sale-mobile.jpg') no-repeat center center;
     background-size: cover;
@@ -185,7 +196,7 @@ footer {
     border: none;
 }
 
-/* Products Page */
+/* Product Page Styles */
 .card {
     max-width: 19rem;
     font-size: 0.8rem;
@@ -193,6 +204,7 @@ footer {
     border: none;
 }
 
+/* Back to Top Button Style */
 #back-to-top {
     background-color: rgba(178, 103, 94, 0.7);
     height: 42px;
@@ -203,7 +215,11 @@ footer {
     cursor: pointer;
 }
 
-/* Toasts */
+.star-rating {
+    color: #FDC542;
+}
+
+/* Toast Notification Styles */
 .message-container {
     position: fixed;
     top: 72px;
@@ -225,7 +241,7 @@ footer {
     overflow-y: auto;
 }
 
-/* Favorites Page and Buttons*/
+/* Favorites Page and Favorite Buttons Styles */
 .position-abs {
     position: absolute;
     top: 5px;
@@ -258,13 +274,13 @@ footer {
     border: none;
 }
 
-/* Checkout Page */
+/* Checkout Page Styles */
 select:invalid,
 select option[value=""] {
     color: #6c757d !important;
 }
 
-/* Allauth */
+/* Allauth Styles */
 .allauth-form-inner-content {
     margin: 2rem auto;
     padding: 2.5rem;
@@ -289,8 +305,7 @@ select option[value=""] {
     margin: 10px;
 }
 
-/* Product Form */
-
+/* Product Form Styles */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -329,7 +344,7 @@ select option[value=""] {
     }
 }
 
-/* Mobile and tablet */
+/* Styles for Mobile and Tablet Screens */
 @media screen and (max-width: 991px) {
     .hero {
         background: url('/media/hero.jpg') no-repeat center center;;
@@ -355,9 +370,11 @@ select option[value=""] {
     }
 }
 
-/* Very small mobile */
+/* Styles for Very Small Mobile Screens */
 @media screen and (max-width: 355px) {
-    body p {
+    body p,
+    body li,
+    body a {
         font-size: 0.875rem;
     }
     /*
