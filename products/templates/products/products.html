@@ -59,7 +59,7 @@
                                          {% if subcat.name == 'sale' %}text-uppercase{% else %}text-capitalize{% endif%} 
                                          {% if subcat.name == 'sale' or subcat.name == 'accessories' or subcat.name == 'new_arrivals' %}mt-3{% endif %}" 
                                          href="{% url 'products' %}?category={{var_category}}&subcategory={{subcat}}">
-                                         {{ subcat }}
+                                         {{ subcat.friendly_name }}
                                      </a>
                                  </li>
                              {% endif %}
@@ -72,7 +72,7 @@
                             {% for cat in all_categories %}
                             <li class="nav-item">
                                 <a class="nav-link text-capitalize pb-0" 
-                                href="{% url 'products' %}?category={{ cat }}&subcategory={{ var_subcategory }}">{{ cat }}</a>
+                                href="{% url 'products' %}?category={{ cat }}&subcategory={{ var_subcategory }}">{{ cat.friendly_name }}</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -83,7 +83,7 @@
                             {% for cat in all_categories %}
                             <li class="nav-item">
                                 <a class="nav-link text-capitalize pb-0" 
-                                href="{% url 'products' %}?category={{ cat }}">{{ cat }}</a>
+                                href="{% url 'products' %}?category={{ cat }}">{{ cat.friendly_name }}</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -92,17 +92,32 @@
                 <div class="col-12 col-lg-10">
                     <div class="mt-sm-3 mt-lg-4">
                         <div class="mb-3 d-flex flex-row">
-                            <div class="flex-grow-1">
-                                <p class="text-muted text-md-start small">
-                                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span><a href="{% url 'products' %}">Back to All Products</a> | </span>
+                            <!-- Category navigation for mobile and tablets -->
+                            <div class="me-auto">
+                                <div class="btn-group d-lg-none">
+                                    <button class="text-black btn btn-beige text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Choose Category <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                    <!-- If user chooses Women/ Men/ Kids, display the subcategories in the subcategories -->
+                                    {% if var_category == "women" or var_category == "men" or var_category == "kids" %}
+                                        {% for subcat in all_subcategories %}
+                                            {% if subcat.name in subcategories_exist %}
+                                                <li><a class="dropdown-item" href="{% url 'products' %}?category={{var_category}}&subcategory={{subcat}}">{{ subcat.friendly_name }}</a></li>
+                                            {% endif%}
+                                        {% endfor %}
+                                    <!-- If user chooses All Products, display the categories instead -->
+                                    {% else %}
+                                        {% for cat in all_categories %}
+                                            <li><a class="dropdown-item" href="{% url 'products' %}?category={{ cat }}">{{ cat.friendly_name }}</a></li>
+                                        {% endfor %}
                                     {% endif %}
-                                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                                </p>
+                                </ul>
+                            </div>
                             </div>
                             <!-- Sorting -->
-                            <div>
-                                <a class="nav-link text-black py-0" href="#" id="sortDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <a class="text-black btn btn-beige text-end" href="#" id="sortDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Sort by 
                                     <i class="fas fa-chevron-down"></i>
                                 </a>
@@ -110,28 +125,38 @@
                                     {% if var_category and var_subcategory %}
                                         <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=price&direction=asc">By Price (Lowest to Highest)</a></li>
                                         <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=price&direction=desc">By Price (Highest to Lowest)</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=rating&direction=desc">By Rating</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=name&direction=asc">By Name</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=rating&direction=desc">By Rating (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=total_purchased&direction=desc">By Popularity (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&subcategory={{ var_subcategory }}&sort=name&direction=asc">By Name (A to Z)</a></li>
                                     {% elif var_category and var_subcategory == None %}
                                         <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=price&direction=asc">By Price (Lowest to Highest)</a></li>
                                         <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=price&direction=desc">By Price (Highest to Lowest)</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=rating&direction=desc">By Rating</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=name&direction=asc">By Name</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=rating&direction=desc">By Rating (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=total_purchased&direction=desc">By Popularity (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category={{ var_category }}&sort=name&direction=asc">By Name (A to Z)</a></li>
                                     {% elif var_category == None and var_subcategory %}
                                         <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=price&direction=asc">By Price (Lowest to Highest)</a></li>
                                         <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=price&direction=desc">By Price (Highest to Lowest)</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=rating&direction=desc">By Rating</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=name&direction=asc">By Name</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=rating&direction=desc">By Rating (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=total_purchased&direction=desc">By Popularity (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?subcategory={{ var_subcategory }}&sort=name&direction=asc">By Name (A to Z)</a></li>
                                     {% else %}
                                         <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price (Lowest to Highest)</a></li>
                                         <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">By Price (Highest to Lowest)</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">By Name</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?sort=total_purchased&direction=desc">By Popularity (Highest to Lowest)</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">By Name (A to Z)</a></li>
                                     {% endif %}
                                 </ul>
                             </div>
                             
                         </div>
+                        <p class="text-muted text-md-start small">
+                            {% if search_term  %}
+                                <span><a href="{% url 'products' %}">Back to All Products</a> | </span>
+                                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {% endif %}
+                        </p>
                     </div>
                     
                     <div class="row mt-md-2" id="product-wrapper">
@@ -215,20 +240,7 @@
                 </div>
             </div>
         </div>
-         <!-- Load More Button -->
-         {% if var_category == None and var_subcategory == None %}
-         <div class="d-flex justify-content-center align-items-center">
-            <button id="load-more-button" class="btn btn-beige text-uppercase my-5 fw-bold">Load More Products</button>
-        </div>
-         {% endif %}
-         {{total_obj|json_script:"json-total"}}
-
-        <!-- Back to top button -->
-        <a class="text-center" id="back-to-top" href="#">
-            <div class="h-100 shadow-sm rounded-0 d-flex justify-content-center align-items-center">
-                <i class="fas fa-arrow-up"></i>
-            </div>
-        </a>
+        
     </section>
 
 {% endblock %}
@@ -236,71 +248,7 @@
 {% block postloadjs %}
     {{ block.super }}
    <script>
-        
-        // Load More Products, adapted from https://www.youtube.com/watch?v=t8luXilRnlE
-        const total = JSON.parse(document.getElementById('json-total').textContent);
-        function loadMoreProducts() {
-            let _current_item = $('.card').length
-            const content_container = document.getElementById("product-wrapper");
-            $.ajax({
-                url: '{% url "load_more" %}',
-                type: 'GET',
-                data: {
-                    'loaded_item': _current_item,
-                },
-                beforeSend: function () {
-                    $('#load-more-button').html('<i class="fas fa-spinner"></i>');
-                },
-                success: function (response) {
-                    console.log(response)
-                    const data = response.products
-                    $('#load-more-spinner').addClass('d-none');
-                    data.map(product => {
-                        content_container.innerHTML += 
-                        `<div class="col-6 col-md-4 col-lg-3">\
-                            <div class="card mx-auto">\
-                                <div>\
-                                    <a href="/products/${product.id}">\
-                                        <img class="card-img-top img-fluid" src="/media/${product.image}" alt="${product.name}">\
-                                    </a>\
-                                    <div class="circle-overlay position-abs">\
-                                        <a href="/favorites/add_to_favorites/${product.id}" role="button" class="btn-fav" aria-label="add to favorites">\
-                                            {% if product in favorites.products.all %}\
-                                                <i class="fas fa-heart fa-inverse text-danger"></i>\
-                                            {% else %}\
-                                                <i class="fas fa-heart fa-inverse"></i>\
-                                            {% endif %}\
-                                        </a>\
-                                    </div>\
-                                </div>\
-                                <div class="card-body pt-1 ps-0 pb-0">\
-                                    <p class="card-text mb-0">${product.name}</p>\
-                                </div>\
-                                <div class="card-footer bg-white ps-0 pt-0 border-0 text-left">\
-                                    <div class="row">\
-                                        <div class="col">\
-                                            <p class="mb-0 text-start fw-bold">€ ${product.price}</p>\
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i> ${product.rating} / 5</small>\
-                                        </div>\
-                                    </div>\
-                                </div>\
-                            </div>\
-                        </div>`
-                    });
-                    if (_current_item == total) {
-                        $('#load-more-button').addClass('d-none');
-                    } else {
-                        $('#load-more-button').text('Load More Products');
-                    }
-                },
-                error: function (err) {
-                    console.log(err);
-                },
-            });
-        }
-        $('#load-more-button').click(function () {
-            loadMoreProducts();
-        });
+
         $(document).ready(function() {
             // Back to top button functionality
             $("#back-to-top").click(function(event) {
