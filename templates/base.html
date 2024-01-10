@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,8 +8,10 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
         {% endblock %}
+
         {% block extra_meta %}
         {% endblock %}
+        
         {% block corecss %}
             <!-- Google Fonts -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,14 +46,14 @@
             <div class="row d-none d-lg-flex">
                 <div class="col-12 col-md-4 col-lg-5 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'products' %}">
-                        <div class="input-group search-query">
+                        <div class="input-group search-query w-75">
                             <input class="form-control" type="text" name="q" placeholder="Search item">
                             <button class="button-icon" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </form>
                 </div>
                 <div class="col-12 col-md-4 col-lg-2 my-auto py-1 py-lg-0 text-center">
-                    <a class="navbar-brand d-flex justify-content-center" href="{% url 'home' %}">
+                    <a class="navbar-brand me-0 d-flex justify-content-center" href="{% url 'home' %}">
                         <div class="logo"></div>
                     </a>
                 </div>
@@ -103,22 +106,26 @@
                     </ul>
                 </div>
             </div>
+
             <!-- Navigation Menu -->
             <div class="navbar navbar-light navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top.html' %}
                     {% include 'includes/main-nav.html' %}
                 </div>
             </div>
+
             <div id="delivery-banner" class="row text-center">
-                <div class="col text-white">
+                <div class="col bg-salmon">
                     <h6 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h6>                
                 </div>            
             </div>
         </nav>
+
         {% if messages %}
         <div class="message-container">
             {% for message in messages %}

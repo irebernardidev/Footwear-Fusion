@@ -219,6 +219,12 @@ footer {
     color: #FDC542;
 }
 
+/* Individual Product Page Styles */
+
+.box-shadow {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
 /* Toast Notification Styles */
 .message-container {
     position: fixed;
