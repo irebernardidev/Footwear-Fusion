@@ -1,0 +1,67 @@
+[
+    {
+        "pk": 1,
+        "model": "blogs.blog",
+        "fields": {
+            "image": "blog-white-sneakers.jpg",
+            "author": 1,
+            "title": "These Forgotten $45 Sneakers From the '90s Are Making a Major Comeback",
+            "paragraph1": "Right now, everyone is wearing sneakers. While that's not necessarily shocking, it is a stark contrast from the Ugg boots that seemed to be everywhere just a couple weeks ago. Spring is finally here, and while some celebrities are starting to wear pumps, most of them are opting for a simple sneaker to get around. Which is some good news considering we may have some time to kill before wedge sandals really become a thing again. And while Jennifer Garner wearing Vejas or Gigi Hadid wearing Reeboks isn't necessarily shocking, Emily Ratajkowski wearing Keds definitely is. If you're thinking “Wow, I haven't heard the name Keds in a while,” you are absolutely right.",
+            "paragraph2": "Keds have been popular since the '80s, particularly after Jennifer Grey wore a pair in the film Dirty Dancing. They experienced their biggest wave in the '90s, often seen as a go-to comfort shoe that cost under $50. But eventually they fell out of favor, mostly because sneakers quickly became seen as a trendy item and not just a wardrobe staple. Suddenly there were hundreds of brands and styles to choose from. On top of being nostalgic, Keds are also an incredibly innocuous sneaker. They're not controversial like chunky sneakers and they're not unexpected like blue Vejas. They're also super affordable, with more than a handful of pairs under $50 on Amazon right now. Keds are made of canvas, which makes blisters nearly impossible. And unlike most white sneakers that you have to panic about getting dirty, Keds are easy to wash and affordable to replace when the time comes.",
+            "paragraph3": "Nobody really saw Keds making a comeback, but we're honestly here for anything overthrowing the Golden Goose reign in Hollywood. Plus, wearing a pair of Keds is the easiest way to look a couple years younger, too. So while these sneakers may not have been the most obvious trend, maybe they’re the only one we really need right now.",
+            "created_on": "2023-12-22 15:50"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "blogs.blog",
+        "fields": {
+            "image": "blogs-spring.jpg",
+            "author": 1,
+            "title": "Mix And Match Your Style for Spring!",
+            "paragraph1": "Spring Summer 2024 Trends: This year brings bold and stylish designs. Large blazers and bold blue bags are in. Fashion also revisits influential past decades. Let's explore this Spring-Summer's signature designs.",
+            "paragraph2": "Sunglasses and Scarfs: Face masks are out, and vibrant sunglasses are in, perfect for any outfit. Head scarfs, a hit from the 50s and 60s, are back too. Choose from silky patterns or bold colors. Yellow bags remain a timeless trend, adding a pop to any look, whether monochromatic or vibrant.",
+            "paragraph3": "Styling Tips: Mixing spring prints? Consider their sizes and color families. Pair them with simple textures like denim. Get ready with spring essentials - colorful accessories, maxi dresses, Bermuda shorts, and sleeveless tops. Remember, light fabrics and colors are key, but add a bright pop if you opt for dark shades.",
+            "created_on": "2024-01-10 15:59"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "blogs.blog",
+        "fields": {
+            "image": "blogs-customshoes.jpg",
+            "author": 1,
+            "title": "Best Paint Markers to Use for Bag and Shoe Designs",
+            "paragraph1": "A pair of custom-made, hand painted shoes can cost quite a lot of money in vintage and specialty stores. Take the more inexpensive route and paint shoes yourself. With a little bit of talent and some specialty paint markers, you can turn an old pair of sneakers into some crazy kicks. You may want to practice on a piece of fabric or leather of similar texture, or a spare pair of old shoes, before attempting to turn your favorite shoes into works of art. Although you can use just about any type of marker to draw on your shoes, not all will be waterproof, fade resistant, and have a smooth application.",
+            "paragraph2": "Different types of paint pens that work on shoes include pens designed for clothing, pens designed for graffiti, and pens designed for leather. Angelus leather paint is widely recognized as the best markers to use when customizing leather sneakers. Shoes always look best when they are originally white. This way, the color of the paint will not be mixed with any other base colors on the sneakers. Angelus leather paint markers come in standard, neon, and metallic colors and are water-resistant. For waterproof, durable shoes, an acrylic finisher can be painted or sprayed onto the sneakers.",
+            "paragraph3": "Leather paint markers like Angelus are available only at specialty art stores, graffiti stores, or on the Internet. Angelus leather paint markers can also be used on leather pants, furniture, light-colored dress shoes, leather bags, and other items made of leather or faux leather. If you would like to paint shoes that are not leather, fabric markers such as Fabrico Dual Tip Fabric Markers and Molotow Markers. If you would like to paint shoes that are made of a material other than leather or fabric, the Uni Posca Extra Broad Line Marker is a waterproof marker designed for plastic, wood, glass, and other materials.",
+            "created_on": "2024-1-05 16:05"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "blogs.blog",
+        "fields": {
+            "image": "blogs-boots.jpg",
+            "author": 1,
+            "title": "Ways to Make Your All-Weather Boots More Fashionable",
+            "paragraph1": "Waterproof boots are practical since they are tough. Not only are they durable but they are also fashionable. When you find the right all-weather boots, pair them with the appropriate clothing for a fashionable look. Here are some ways on how to style your outfit with all-weather boots.",
+            "paragraph2": "Hiking boots have been used in fashion. Therefore, you can apply this with all-weather boots. When wearing a dress, you can pair your boots with fishnets to give you a 90s grunge look. Layering clothes and wearing plaid is the key to have a street-style look. What makes this style better is you can sport in any weather. When choosing outerwear for your boots, tailored blazers, puffers, and parkas are a great choice. Though a tailored blazer is more popular to wear with heels or loafers, you can also pair it with tough shoes.",
+            "paragraph3": "Are you tired of your usual denim and boots outfit? Try going for a denim-on-denim look with your all-weather boots. This will make you look like you are wearing a single piece of clothing such as a jumpsuit. Unlike jumpsuits, going to the bathroom is a breeze with this look and you will have a stylish look.",
+            "created_on": "2023-12-22 16:07"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "blogs.blog",
+        "fields": {
+            "image": "blogs-menstyle.jpg",
+            "author": 1,
+            "title": "The Ultimate Guide to Spring Style for Men",
+            "paragraph1": "1. SWAP IN SPRING FABRICS - Despite the occasional chilly night, those heavy wool blazers, cable knit sweaters, and thick cotton tees are gonna be overkill. It's time to make a switch to spring fabrics.",
+            "paragraph2": "2. GO LIGHTER, NOT BRIGHTER - Bright colors aren't a thing for many of my private clients. For them, I recommend they go “Lighter, not brighter.” You don't need to wear school bus yellow or leperchaun green in Spring to look colorful. A shade or two lighter in your neutrals can do wonders for your Spring color palette. Switch from dark indigo to a washed blue, or a dark grey to a lighter grey for an instant color hack.",
+            "paragraph3": "3. GET LAYERED - Spring weather can be unpredictable, so focus on layering pieces to keep you warm on those chilly days. Along with warmth, layering also gives your looks added depth, helping you stand out from the basic t-shirt and jeans look.",
+            "created_on": "2023-12-21 16:12"
+        }
+    }
+]
