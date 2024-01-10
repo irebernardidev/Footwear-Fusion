@@ -42,22 +42,25 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane container" id="information">
+                        <p class="mb-5">Update your delivery information.</p>
                         <div class="row">
-                            <div class="col-12 col-md-7">
-                                <p>Default Delivery Information</p>
+                            <div class="col-12 col-md-7 mx-auto">
+                                <p class="fs-5 mb-4 p-2 w-100 fw-bold bg-beige">Default Delivery Information</p>
                                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                                     {% csrf_token %}
                                     {{ form|crispy }}
-                                    <button class="btn btn-brown float-end my-5">Update Information</button>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn btn-brown mt-4 mb-5">Update Information</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane container fade" id="purchases">
-                        <div class="row">
+                        <div class="row mb-5">
                             <div class="col-12">
                                 {% if orders %}
-                                    <p class="fw-bold">Order History</p>
+                                <p class="fs-5 mb-4 p-2 w-100 fw-bold bg-beige">Order History</p>
                                     <div class="order-history table-responsive">
                                         <table class="table table-sm table-borderless">
                                             <thead>
@@ -96,7 +99,7 @@
                                         </table>
                                     </div>
                                 {% else %}
-                                    <p>No order history.</p>
+                                <p class="mb-5">No order history.</p>
                                 {% endif %}
                             </div>
                         </div>
@@ -104,6 +107,7 @@
                     <div class="tab-pane container fade" id="reviews">
                         <div class="row">
                             <div class="col-12 mx-auto">
+                                <p class="mb-4">Help other people to make decisions in buying products by giving reviews on products that you have purchased before!</p>
                                 <div class="row mb-5">
                                     <!-- Display products that have been purchased by user, but not yet reviewed -->
                                     {% for order in orders %}
@@ -111,12 +115,12 @@
                                             {% if item.product.id not in reviews %}
                                                 <div class="col-12 col-lg-6">
                                                     <div class="row g-0 my-3 item-to-be-reviewed">
-                                                        <div class="col-7">
+                                                        <div class="col-7 pe-2">
                                                             <a href="{% url 'product_detail' item.product.id %}" class="d-flex justify-content-center">
                                                                 {% if item.product.image %}
-                                                                    <img class="w-75" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                                                <img src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                                                 {% else %}
-                                                                    <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                                                 {% endif %}
                                                             </a>
                                                         </div>

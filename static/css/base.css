@@ -280,6 +280,11 @@ footer {
     border: none;
 }
 
+/* Bag Page Styles */
+.img-creditcard {
+    width: 200px;
+}
+
 /* Checkout Page Styles */
 select:invalid,
 select option[value=""] {
