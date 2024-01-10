@@ -29,4 +29,3 @@ def contact(request):
 def faq(request):
     """ FAQ Page """
     return render(request, 'contact/faq.html')
-
