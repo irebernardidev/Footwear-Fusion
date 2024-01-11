@@ -117,7 +117,7 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'full_name': profile.user.default_full_name,
+                    'full_name': profile.default_full_name,
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
                     'country': profile.default_country,
@@ -148,7 +148,7 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    save_info = request.session.get('save-info')
+    save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     
     if request.user.is_authenticated:
