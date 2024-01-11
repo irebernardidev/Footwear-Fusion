@@ -1,1 +1,1 @@
-web: gunicorn footwear_fusion.wsgi:application
+web: gunicorn Footwear_Fusion.wsgi:application
