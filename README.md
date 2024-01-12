@@ -292,16 +292,47 @@ The Checkout page is designed for efficiency and ease, consisting of a form for 
 Upon successful transaction processing, the Checkout Success page presents a detailed summary of the completed order. Here, users can review their order specifics, including the list of items purchased, the delivery address, and the billing details. For registered users, this summary is also accessible through their Profile page, enabling them to track and reference their orders conveniently.
 
 #### **8. Profile Page - My Information**  
-
+[View the Profile Page - My Information here](readme-testing-files/readme/profile-information-page.png)  
+- The Profile page is intuitively organized into three tabs: My Information, My Purchases, and Ratings/Reviews.
+- The My Information tab allows users to update and save their delivery details. These saved details are conveniently used to auto-fill the delivery section of the Checkout form in future purchases, requiring users only to input their payment information.
+- Changes to the delivery details are easily made by modifying the input fields and clicking the 'Update Information' button, which then synchronizes the information with the user's profile in the database.
 
 #### **9. Profile Page - My Purchases**  
-
+[View the Profile Page - My Purchases here](readme-testing-files/readme/profile-orderhistory-page.png)  
+- The My Purchases tab presents a chronological list of the user's order history, with the most recent purchases displayed first.
+- Users can interact with each order number, which links to the Checkout Success page, providing detailed information about that specific order.
 
 #### **10. Profile Page - Ratings/Reviews**  
+[View the Profile Page - Ratings/Reviews here](readme-testing-files/readme/profile-reviews-page.png)  
+- The Ratings/Reviews tab is a dedicated space for users to engage with products they have purchased.
+- It lists all items eligible for review, ensuring that reviews are based on actual user experience. To leave a review, users can select the 'Give Review' button adjacent to the product, which redirects them to the Add Review page.
+- Once a review is submitted, the item will no longer appear in the list, maintaining an up-to-date overview of products pending review.
 
+#### **11. Add/ Edit Review Page**  
+[View the Add/ Edit Review Page here](readme-testing-files/readme/add-edit-review-page.png)  
+- The Review Submission page presents users with a straightforward form for rating and reviewing a specific product. Users are required to assign a rating on a scale of 1 to 5, and they have the option to include a written review. Submission of the form necessitates at least a rating, as it cannot be processed with this field left blank.
+- Below the form, users will find a 'Submit Review' button to finalize their input. Additionally, a 'Cancel' button is conveniently placed, allowing users to return to the review section of their profile if they decide not to proceed.
+- Upon successful submission, the user is redirected back to the review section of their profile. This action is deliberately designed to encourage an ongoing engagement with reviewing additional products.
+- It's important to note that while the Add Review and Edit Review pages operate with separate templates, their design and layout remain identical for user familiarity and ease of use. The Edit Review page, however, is distinct in that it auto-fills the input fields with the user's previously submitted rating and review for easy modification.
+- As previously outlined in the section discussing the Individual Product page, users have the ability to edit their reviews. This is achieved by visiting the Individual Product page, locating their existing review, and selecting the 'Edit' option to make amendments.
 
+#### **12. Articles Page**  
+[View the Articles Page here](readme-testing-files/readme/articles-page.png)
+- The Articles page is a curated space where visitors can find a wealth of information on footwear and accessories. It aims to enrich the customer journey beyond mere transactions by offering engaging content that could foster greater interaction with the brand.
+- Each article is presented in a clean, card-style layout that includes a visual snippet, an enticing headline, a brief excerpt of the content, and a 'Read more' link that directs users to the full Individual Article page. 
 
+#### **13. Individual Article Page**  
+[View the Individual Article Page here](readme-testing-files/readme/individual-article-page.png)
+- The Individual Article page is dedicated to showcasing the full content of an article, featuring the main image, headline, and the publication date for context.
+- To encourage continued exploration, a 'Read more articles' button is strategically positioned at the bottom-center of the page, inviting users to navigate back to the main collection of articles.
 
+#### **14. FAQ Page**  
+Discover the answers to common inquiries on the [FAQ Page here](readme-testing-files/readme/faq-page.png)  
+This section addresses typical questions related to payment, orders, returns, and more. Users can easily navigate to the FAQ page via the link located in the website's footer. Should there be questions not covered, users are encouraged to reach out for further assistance by utilizing the 'Go to Contact Page' button, conveniently positioned at the bottom-center of the FAQ page.
+
+#### **15. Contact Page**  
+
+#### **16. Sign In and Log In Page**  
 
 
 
