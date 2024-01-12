@@ -331,8 +331,27 @@ Discover the answers to common inquiries on the [FAQ Page here](readme-testing-f
 This section addresses typical questions related to payment, orders, returns, and more. Users can easily navigate to the FAQ page via the link located in the website's footer. Should there be questions not covered, users are encouraged to reach out for further assistance by utilizing the 'Go to Contact Page' button, conveniently positioned at the bottom-center of the FAQ page.
 
 #### **15. Contact Page**  
+[View the Contact Page here](readme-testing-files/readme/contact-page.png)  
+- The Contact Page is designed to facilitate customer interaction with the store. It lists the store's contact details, including a phone number and email address, along with a contact form for direct inquiries.
+- Upon submission, the contact form is programmed to store user messages in the database, enabling store administrators to review and address all incoming communications effectively.
 
-#### **16. Sign In and Log In Page**  
+#### **16. Register and Log In Page**  
+[View the Register Page here](readme-testing-files/readme/register-page.png)  
+[View the Login Page here](readme-testing-files/readme/login-page.png)  
+- The Registration page offers a straightforward process for user sign-up. Essential details required for registration include an email address, username, and password. A confirmation email is sent post-registration, containing a link for account activation, a prerequisite for login privileges on the site.  
+- The Login page provides a seamless re-entry point for existing users. They can regain access to the site using their email or username in combination with their password.
+
+#### **17. Product Management / Add Product page (Admin / Superuser only)**  
+[View the Product Management Page here](readme-testing-files/readme/add-product-page.png)  
+- Exclusive to Admins or Superusers, the Product Management interface is accessible via the 'My Account' section in the Navbar post-login.
+- The interface includes a comprehensive form enabling the addition of new products, with fields for category, subcategory, SKU, product name, size availability, price, rating, and product image.
+- An 'Add Product' button at the bottom-center of the page submits the new entry, while a 'Cancel' button provides an easy navigation route back to the products overview page.
+
+#### **18. Edit Product page (Admin / Superuser only)**  
+[View the Edit Product Page here](readme-testing-files/readme/edit-product-page.png)  
+- The Edit Product interface is similarly exclusive to Admins or Superusers and is accessed via an 'Edit' link next to each product listing on the Products page.
+- Mirroring the Add Product page in design, this consistency ensures a user-friendly experience with a negligible learning curve for administrators.
+- Product updates are confirmed with an 'Update Product' button, and a 'Cancel' button is also provided to revert back to the main product listing without making changes.
 
 
 
