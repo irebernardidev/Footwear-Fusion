@@ -268,6 +268,38 @@ Toast notifications serve as an interactive feedback mechanism for users, confir
 - The option to add the product to the shopping bag is straightforward: select the size, determine the quantity, and click the 'Add to Bag' button.
 - Registered users possess the unique capability to modify or remove their reviews, with 'edit' and 'delete' options conveniently located below the review they posted.
 
+#### **4. Favorites Page**  
+[View the Favorites Page layout here](readme-testing-files/readme/favorites-page.png)  
+- The Favorites interface showcases a user's selected products, echoing the layout of the main product page with the item's image, name, price, and rating. These items are arranged into a responsive grid that adjusts across devices: four columns on large screens, three on medium, and two on small screens.
+- Product interaction is refined on this page, with the heart icon replaced by a trash icon on the upper right of each product image, indicating the ability to remove items from favorites.
+- Acknowledging the Favorites as a curated collection of items users are considering for purchase, there is a direct option to select sizes and an 'Add to Bag' button beneath each item, streamlining the process of transferring favorites directly to the shopping bag without visiting the product's individual page.
+
+#### **5. Shopping Bag Page**  
+[View the Bag page here](readme-testing-files/readme/bag-page.png)  
+- The Shopping Bag interface displays all items a user has added to their cart, along with the total cost, allowing for adjustments in quantity or removal of items directly on this page.
+- Detailed product information is presented, including the image, name, SKU, price, selected size, and chosen quantity.
+- An intuitive trash icon adjacent to each item offers a clear call to action to remove products from the bag.
+- The subtotal for each product is dynamically updated based on the chosen quantity, enhancing the user's understanding of the cost breakdown.
+- Crucial checkout information, including the itemized total, delivery charges, and grand total, is distinctly separated within a dedicated box to draw attention to the final cost and next steps. This section also includes a conspicuous 'Checkout' call-to-action button and graphical representation of accepted payment methods.
+- For users wishing to continue shopping, a 'Keep Shopping' button is conveniently placed below the grand total box as an alternative action.
+
+#### **6. Checkout Page**  
+[View the Checkout Page here](readme-testing-files/readme/checkout-page.png)  
+The Checkout page is designed for efficiency and ease, consisting of a form for processing transactions and displaying order details. The form is intuitively organized into three distinct sections for simplicity: 'Details' for the user's name and email, 'Delivery' for the address, and 'Payment' for card information. A summary of products selected on the Bag page, along with the total amount due, is also prominently featured. To facilitate a smooth transaction, call-to-action (CTA) buttons are strategically placed to prompt payment and finalize the purchase or to provide an option to modify the bag contents.
+
+#### **7. Checkout Success Page**   
+[View the Checkout Sucess Page here](readme-testing-files/readme/checkout-success-page.png)  
+Upon successful transaction processing, the Checkout Success page presents a detailed summary of the completed order. Here, users can review their order specifics, including the list of items purchased, the delivery address, and the billing details. For registered users, this summary is also accessible through their Profile page, enabling them to track and reference their orders conveniently.
+
+#### **8. Profile Page - My Information**  
+
+
+#### **9. Profile Page - My Purchases**  
+
+
+#### **10. Profile Page - Ratings/Reviews**  
+
+
 
 
 
