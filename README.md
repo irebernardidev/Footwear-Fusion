@@ -238,6 +238,41 @@ Toast notifications serve as an interactive feedback mechanism for users, confir
 ![Success toast message - with bag display](readme-testing-files/readme/toast-success.png "Success toast message - with bag display")   
 
 
+### **B. Page Features**  
+#### **1. Home Page**  
+[View the Homepage layout here](readme-testing-files/readme/home-page.png)   
+- The Home page engages visitors immediately with a dynamic array of images, serving as a visual lure to explore further and encouraging purchases.
+- A full-screen hero image sets a striking tone, featuring a prominent jumbotron heading that delivers a memorable first impression. This element highlights the latest seasonal offerings, along with a call-to-action (CTA) button that guides users straight to the new arrivals. 
+- A dedicated section for the Sneakers Collection offers swift access to these products.
+- 'Shoes for Every Family Member' section simplifies navigation by dividing the offerings into categories: Women, Men, and Kids.
+- 'Top Sellers' showcases the most frequently purchased items, hinting at popular choices among consumers, presented in a carousel format that displays eight products at a time.
+- Final Sale' acts as a portal to discounted items, making bargain deals easily accessible.
+- 'Bags and Accessories' directs shoppers to a curated selection of related items.
+- The 'Articles and Blogs' area introduces the three most recent pieces from the store's admin or selected superusers, with an additional option to 'See More Articles', leading to a comprehensive view of all available content.
+
+#### **2. Products Page Overview**  
+[View the Products Page layout here](readme-testing-files/readme/products.png)   
+- At the top of the Products page, users are greeted with breadcrumb navigation, which aids in tracking their journey through the site - for instance, selecting Women Sneakers displays: Home > Women > Sneakers.
+- Prominently placed beneath the breadcrumb is a 'Final Sale' banner, catering to users' propensity to browse sale items initially. The 'shop now' button on this banner filters the view to showcase only items on sale.
+- An exclusive desktop feature, the Side Navigation, allows for swift perusal of categories and subcategories, filtering the display to the user's specific interests. On mobile devices, this functionality is available via the hamburger menu.
+- Users can also sort the displayed product results by price, rating, or name, enabling them to find products that meet their preferences more efficiently.
+- The display of products is responsively designed, with 4 columns on large screens, 3 on medium-sized screens, and 2 on smaller screens, ensuring a cohesive visual experience across devices.
+- Each product image is equipped with a heart icon in the top right corner, which fills in red upon hover. This interactive feature allows registered users to add products to their favorites with a single click, with the heart icon remaining red to signify its status as a favored item.
+- For added convenience, a 'back to top' button is fixed on the right side of the screen, providing quick and easy navigation back to the top of the page.
+
+#### **3. Individual Product Page**  
+[View the Individual Product Page layout here](readme-testing-files/readme/individual-product-page.png)  
+- At the outset, users are greeted by a breadcrumb trail, aiding in the understanding of the page’s position within the site's structure. 
+- The page prominently displays the product's imagery, name, cost, ratings, category, and user reviews at the lower section. 
+- A heart icon, placed near the top right of the product image, signals a feature for registered users to add the item to their favorites; this icon highlights in red upon interaction and remains red once the product is in the user's favorites.
+- The option to add the product to the shopping bag is straightforward: select the size, determine the quantity, and click the 'Add to Bag' button.
+- Registered users possess the unique capability to modify or remove their reviews, with 'edit' and 'delete' options conveniently located below the review they posted.
+
+
+
+
+
+
 
 
 
