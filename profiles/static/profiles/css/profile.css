@@ -1,7 +1,7 @@
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #000;
-    background-color: #E8DCD5;
+    background-color: #F5CAC3;
 }
 
 .nav-pills > .nav-item:first-child, 
@@ -14,6 +14,10 @@
     border: 1px solid #000;
 }
 
+.profile-form-input::-webkit-input-placeholder,
+.profile-form-input::-moz-placeholder,
+.profile-form-input:-ms-input-placeholder,
+.profile-form-input::-ms-input-placeholder,
 .profile-form-input::placeholder {
     color: #aab7c4;
 }
@@ -27,17 +31,12 @@
     color: #aab7c4;
 }
 
-.order-history {
-    max-height: 416px; /* height of profile form + submit button */
-    overflow-y: auto;
-}
-
 .item-to-be-reviewed img {
     width: 80%;
 }
 
-/* Media Queries */
-/* Very small mobile Styles */
+/* Media Queries Styles */
+/* Very small mobile */
 @media screen and (max-width: 400px) {
     .form-control, 
     .form-check,
