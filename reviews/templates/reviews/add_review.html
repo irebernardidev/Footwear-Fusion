@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_title %} - Add Review Page{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
@@ -18,6 +19,7 @@
                 </div>
             </div>
             <div class="row mb-5">
+                <!-- Product image -->
                 <div class="col-12 col-md-6 col-xl-4 offset-xl-2">
                     <a href="{% url 'product_detail' product.id %}" class="d-flex justify-content-center">
                         {% if product.image %}
@@ -27,29 +29,28 @@
                         {% endif %}
                     </a>
                 </div>
+                <!-- Add Review Form -->
                 <div class="col-12 col-md-6 col-xl-4 pt-4 pt-md-0">
                     <form method="POST" action="{% url 'add_review' product.id %}" class="d-flex flex-column justify-content-center">
                         {% csrf_token %}
-                        
                         <p class="my-0"><strong>{{ product.name }}</strong></p>
                         <p class="my-0"><small>{% if product_size %}Size {{ product_size|upper }}{% endif %}</small></p>
-                        <div class="mt-4">
+                        <div class="mt-3 mt-md-4">
                             <!-- Adapted from: https://codeconvey.com/feedback-form-in-html/-->
                             <fieldset>
-                                <p><small>Give a rating to this product:</small></p>
-                                <span class="star-rating">
-                                    <input type="radio" name="rating" value="1"><i></i>
+                                <label for="star-rating">Give a rating to this product:</label>
+                                <span name="star-rating" class="star-rating">
+                                    <input type="radio" name="rating" value="1" required><i></i>
                                     <input type="radio" name="rating" value="2"><i></i>
                                     <input type="radio" name="rating" value="3"><i></i>
                                     <input type="radio" name="rating" value="4"><i></i>
                                     <input type="radio" name="rating" value="5"><i></i>
                                 </span>
                             </fieldset>
-                            
                         </div>
-                        <div class="mt-4">
-                            <label for="review_text" class="form-label"><small>Write a review about this product:</small></label>
-                            <textarea class="form-control" id="review_text" name="review_text" rows="5"></textarea>
+                        <div class="mt-3 mt-md-4">
+                            <label for="review_text" class="form-label">Write a review about this product:</label>
+                            <textarea class="form-control" id="review_text" name="review_text" rows="5" maxlength="500"></textarea>
                         </div>
                         <div class="d-flex justify-content-end mt-4">
                             <a href="{% url 'profile' %}" class="btn btn-brown-inverted me-2"><small>Cancel</small></a>
