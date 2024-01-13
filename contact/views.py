@@ -8,14 +8,17 @@ SUCCESS_NO_BAG = 50
 
 def contact(request):
     """ Contact Us Page """
-    
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.add_message(request, SUCCESS_NO_BAG, 'Contact Form submitted. Thank you!')
+            messages.add_message(
+                request,
+                SUCCESS_NO_BAG,
+                'Contact Form submitted. Thank you!'
+            )
             return redirect('contact')
-        
     else:
         form = ContactForm()
 
