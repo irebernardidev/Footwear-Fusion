@@ -396,8 +396,8 @@ select option[value=""] {
 
 @media screen and (max-width: 991px) {
     .logo {
-        height: 50px;
-        width: 65px;
+        height: 70px;
+        width: 80px;
     }
 
     .hero {
