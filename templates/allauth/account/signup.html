@@ -3,13 +3,14 @@
 {% load i18n %}
 
 {% block page_header %}
-
+  
 {% endblock %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
-<h2 class="mb-4">{% trans "Sign Up" %}</h2>
+
+  <h2 class="mb-4">{% trans "Sign Up" %}</h2>
 
   <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
@@ -24,5 +25,5 @@
       <button class="btn btn-brown" type="submit">{% trans "Sign Up" %}</button>
     </div>
   </form>
-
+  
 {% endblock %}

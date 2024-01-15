@@ -4,9 +4,15 @@ body {
     background-color: #fff;
     line-height: 1.5;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
+
 
 .text-headings {
     font-family: 'DM Serif Display', serif;
@@ -22,7 +28,7 @@ a {
 }
 
 .bg-beige {
-    background-color: #F5CAC3;
+    background-color: #F7EDE2;
 }
 
 .bg-salmon {
@@ -37,30 +43,37 @@ a {
 }
 
 .btn-beige {
-    background-color: #F5CAC3;
+    background-color: #F7EDE2;
     color: #000;
-    border: 1px solid #F5CAC3;
+    border: 1px solid #F7EDE2;
 }
 
 .btn-beige-inverted {
     background-color: #fff;
     color: #000;
-    border: 1px solid #F5CAC3;
+    border: 1px solid #F7EDE2;
 }
 
 .btn-brown {
     background-color: #84A59D;
     color: #fff;
-    border: 1px solid #644536
+    border: 1px solid #84A59D
 }
 
 .btn-brown-inverted {
     background-color: #fff;
-    color: #644536;
-    border: 1px solid #644536
+    color: #84A59D;
+    border: 1px solid #84A59D
 }
 
-/* Navigation Styles */
+.btn-beige:hover {
+    background-color: #b4a69d;
+    color: #000;
+    border: 1px solid #b4a69d;
+}
+
+/* Navigation Bar & Footer Styles */
+
 .nav-link,
 .navbar-light .navbar-nav .nav-link {
     color: #000;
@@ -82,20 +95,27 @@ a {
     border: none;
 }
 
+.label-bag {
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
 .navbar-offset {
-    padding-top: 183px;
+    padding-top: 177px;
 }
 
 .search-query input {
     border: none;
     border-bottom: 1px solid #000;
-    background-color: #F5CAC3;
+    background-color: #F7EDE2;
     border-radius: 0%;
 }
 
 .button-icon {
     border: none;
-    background-color: #F5CAC3;
+    background-color: #F7EDE2;
     border-bottom: 1px solid #000;
 }
 
@@ -103,7 +123,6 @@ a {
     min-width: 8rem;
 }
 
-/* Link Hover Effects */
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus,
@@ -116,7 +135,6 @@ footer a:focus {
     color: #7a413b;
 }
 
-/* Footer Styles */
 footer {
     font-size: 14px;
 }
@@ -127,50 +145,51 @@ footer {
     padding: 0.75rem;
     border-radius: 50%;
     background-color: rgba(256, 256, 256, 60%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-/* Hero Section Styles */
+/* Home Page Styles */
+
 .text-hero {
     font-size: 5rem;
 }
 
 .hero {
-    background: url('/media/hero.jpg') no-repeat center center;
-    background-size: cover;
+	background: url('/media/hero.jpg') no-repeat center center;
+	background-size: cover;
     height: calc(100vh - 164px);
-    margin-top: 167px;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 40%);
+    background-color: rgba(0, 0, 0, 30%);
     height: 100%;
 }
 
 .logo {
     background: url('/static/images/logo.png') no-repeat center center;
     background-size: contain;
-    height: 100px;
-    width: 120px;
-    transform: scale(1.5);
-    position: relative;
-    top: -10px;
+    height: 80px;
+    width: 100px;
 }
 
 .btn-bottom {
     bottom: 10px;
 }
 
-/* Home Page Button Style */
 .btn-home {
     letter-spacing: 2px;
     font-family: 'DM Serif Display', serif;
     text-transform: uppercase;
 }
 
-/* Image Styles for Sale and Accessories */
 .img-sale {
     background: url('/media/sale-mobile.jpg') no-repeat center center;
     background-size: cover;
@@ -186,7 +205,7 @@ footer {
 }
 
 .bg-light-rose {
-    background-color: #F5CAC3;
+    background-color: #F7EDE2;
 }
 
 .main-carousel .card {
@@ -196,7 +215,8 @@ footer {
     border: none;
 }
 
-/* Product Page Styles */
+/* Products Page */
+
 .card {
     max-width: 19rem;
     font-size: 0.8rem;
@@ -204,13 +224,12 @@ footer {
     border: none;
 }
 
-/* Back to Top Button Style */
 #back-to-top {
     background-color: rgba(178, 103, 94, 0.7);
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 30vh;
+    bottom: 10vh;
     right: 10px;
     cursor: pointer;
 }
@@ -219,13 +238,15 @@ footer {
     color: #FDC542;
 }
 
-/* Individual Product Page Styles */
+/* Individual Product Page */
 
 .box-shadow {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-/* Toast Notification Styles */
+/* Toasts */
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -248,7 +269,8 @@ footer {
     overflow-y: auto;
 }
 
-/* Favorites Page and Favorite Buttons Styles */
+/* Favorites Page and Buttons*/
+
 .position-abs {
     position: absolute;
     top: 5px;
@@ -259,13 +281,20 @@ footer {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
 .circle-overlay {
     background-color: rgba(256, 256, 256, 60%);
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -282,17 +311,20 @@ footer {
 }
 
 /* Bag Page Styles */
+
 .img-creditcard {
     width: 200px;
 }
 
 /* Checkout Page Styles */
+
 select:invalid,
 select option[value=""] {
     color: #6c757d !important;
 }
 
 /* Allauth Styles */
+
 .allauth-form-inner-content {
     margin: 2rem auto;
     padding: 2.5rem;
@@ -318,6 +350,7 @@ select option[value=""] {
 }
 
 /* Product Form Styles */
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -344,57 +377,77 @@ select option[value=""] {
     border-radius: 0;
 }
 
+
 /* --------- MEDIA QUERIES --------- */
-/* Adjust container width for extra-large (xl) screens */
+/* Enhanced Layout for Extra-Large Screens */
+
 @media screen and (min-width: 1200px) {
     .container-xxl {
-        max-width: 80%;
+      max-width: 80%;
     }
+    
     .img-sale {
         background: url('/media/sale-desktop.jpg') no-repeat center center;
         background-size: cover;
     }
 }
 
-/* Styles for Mobile and Tablet Screens */
+/* Adjustments for Mobile and Tablet Displays */
+
 @media screen and (max-width: 991px) {
+    .logo {
+        height: 50px;
+        width: 65px;
+    }
+
     .hero {
-        background: url('/media/hero.jpg') no-repeat center center;;
+        background: url('/media/hero.jpg') no-repeat center center;
         background-size: cover;
         height: calc(100vh - 109px);
-        margin-top: 109px;
     }
+
     .text-hero {
         font-size: 3rem;
     }
-    .logo {
-        height: 60px; 
-        width: 80px; 
-        transform: scale(1); 
-        position: relative; 
-        top: 2px;
-    }
-    .navbar-toggler {
-        z-index: 2; /* Keep menu button above other elements */
-    }
+
     .navbar-offset {
-        padding-top: 113px;
+        padding-top: 109px;
     }
 }
 
-/* Styles for Very Small Mobile Screens */
-@media screen and (max-width: 355px) {
+/* Optimizations for Smaller Mobile Devices */
+
+@media screen and (max-width: 400px) {
     body p,
     body li,
-    body a {
+    body a,
+    .nav-link .fa-heart,
+    .form-select,
+    .form-control, 
+    label,
+    .btn {
         font-size: 0.875rem;
     }
-    /*
-    .navbar-offset {
-        padding-top: 155px;
-    }*/
+    
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .navbar .container-fluid {
         padding-right: 5px;
         padding-left: 5px;
+    }
+
+    .logo-font {
+        font-size: 0.875rem;
+    }
+
+    .navbar-offset {
+        padding-top: 90px;
+    }
+
+    .hero {
+        height: calc(100vh - 90px);
     }
 }
