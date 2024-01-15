@@ -133,7 +133,7 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed to outline th
 
 #### **Color Scheme**  
 The website's design language is articulated through a color palette that captures the essence of tranquility and natural beauty. Each hue is carefully chosen to create an ambiance that is both calming and welcoming, with a subtle infusion of warmth that conjures a sense of peace and serenity.
-At the heart of the palette featured on [Coolors](https://coolors.co)is a soft blush pink (#F5CAC3), radiating a gentle and hospitable vibe. It's paired with an effervescent coral (#F28482), which injects the layout with a lively yet cozy warmth, resonating with a cheerful and dynamic spirit. Grounding these effusive tones, the muted teal (#84A59D) lends an earthy depth to the aesthetic, echoing the brand's connection to natural elements and understated elegance.
+At the heart of the palette featured on [Coolors](https://coolors.co) is a soft blush pink (#F5CAC3), radiating a gentle and hospitable vibe. It's paired with an effervescent coral (#F28482), which injects the layout with a lively yet cozy warmth, resonating with a cheerful and dynamic spirit. Grounding these effusive tones, the muted teal (#84A59D) lends an earthy depth to the aesthetic, echoing the brand's connection to natural elements and understated elegance.
 
 The selection of these colors transcends mere visual pleasure; it is a deliberate strategy to elicit a psychological sense of ease and contentment among visitors. This chromatic harmony is woven consistently throughout the website’s interface, from the tactile feedback of interactive elements to the enchanting allure of the hero image. Each detail is steeped in these colors, crafting a cohesive and engaging digital narrative that guides the user through an effortlessly integrated visual experience.
 ![The color scheme](readme-testing-files/readme/color-scheme.png "The color scheme")
@@ -175,7 +175,7 @@ The database structure was conceptualized and outlined using [drawsql](https://d
    - 'image' field for product visuals, and 'total_purchased' to track sales volume.
 
 - **User M odel**  
-   - Integral to the Django authentication system, this model stores user credentials, including username, email, and password.[django.contrib.auth](https://docs.djangoproject.com/en/4.0/ref/contrib/auth/).
+   - Integral to the Django authentication system, this model stores user credentials, including username, email, and password. [django.contrib.auth](https://docs.djangoproject.com/en/4.0/ref/contrib/auth/).
 
 - **Order Model**
    - This model documents all the data related to successful orders.
@@ -199,7 +199,7 @@ The database structure was conceptualized and outlined using [drawsql](https://d
 
 - **Favorites Model**  
    - Keeps track of a user's favorite products.
-   - To handle the many-to-many relationship with products, an intermediary model called 'FavoritesItem' is used, aligning with best practices from the Django documentation.([source from django documentation](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ManyToManyField.through_fields)).
+   - To handle the many-to-many relationship with products, an intermediary model called 'FavoritesItem' is used, aligning with best practices from the Django documentation. ([source from django documentation](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ManyToManyField.through_fields)).
 
 - **Topic Model**
   - This model manages topics for the contact form.
@@ -218,6 +218,7 @@ Each model is crafted to not only store essential data but also to create a seam
 - **Responsive Design:** The website adapts seamlessly to all devices, ensuring a consistent user experience from the smallest smartphone (minimum width 320px) to the largest desktop display. Navigation is made effortless with intuitive buttons, accessible at any point during the user's journey through the site. 
 
 - **Navigation Bar Across All Pages:**
+
    ![The Navbar on desktop](readme-testing-files/readme/navbar-desktop.png "The Navbar on desktop")   
 
    - The Navbar is designed for flexibility, transforming into a hamburger menu on smaller screens for ease of use, and remains fixed at the top of the screen (sticky) for convenient navigation regardless of the user's position on the page.
@@ -229,6 +230,7 @@ Each model is crafted to not only store essential data but also to create a seam
    - A persistent sales banner positioned just below the Navbar alerts users to free delivery options, visible on every page for constant visibility.
 
 - **Footer Accessible on All Pages:** 
+
    ![The Footer on desktop](readme-testing-files/readme/footer-desktop.png "The Footer on desktop") 
    The Footer mirrors the Navbar's color scheme for design continuity and houses all navigational links, social media connections (which open in a new tab), and the central logo that circles back to the Home page when clicked. 
 
@@ -267,6 +269,17 @@ Toast notifications serve as an interactive feedback mechanism for users, confir
 - A heart icon, placed near the top right of the product image, signals a feature for registered users to add the item to their favorites; this icon highlights in red upon interaction and remains red once the product is in the user's favorites.
 - The option to add the product to the shopping bag is straightforward: select the size, determine the quantity, and click the 'Add to Bag' button.
 - Registered users possess the unique capability to modify or remove their reviews, with 'edit' and 'delete' options conveniently located below the review they posted.
+
+**Review Section** 
+- Located beneath the product details is a section displaying all customer reviews for the product. For users who have previously posted a review, options to edit or delete their review appear below their review. This functionality allows registered users to modify or remove their own reviews.
+The following example illustrates this feature when I'm logged in as the user "ire_b":
+
+![Edit and Delete Review buttons](readme-testing-files/readme/review-edit-delete-button.png "Edit and Delete Review buttons")   
+Upon selecting the Edit button, users are redirected to the Edit Review page [View Edit Review Page](https://github.com/dissyulina/footwear#11-add-edit-review-page).  
+Alternatively, clicking the Delete button triggers a confirmation dialog to verify whether the user intends to delete their review. 
+
+![Confirmation modal before deleting review](readme-testing-files/readme/delete-review-modal.png "Confirmation modal before deleting review")  
+
 
 #### **4. Favorites Page**  
 [View the Favorites Page layout here](readme-testing-files/readme/favorites-page.png)  
@@ -349,13 +362,257 @@ This section addresses typical questions related to payment, orders, returns, an
 
 #### **18. Edit Product page (Admin / Superuser only)**  
 [View the Edit Product Page here](readme-testing-files/readme/edit-product-page.png)  
-- The Edit Product interface is similarly exclusive to Admins or Superusers and is accessed via an 'Edit' link next to each product listing on the Products page.
+- The Edit Product interface is similarly exclusive to Admins or Superusers and is accessed via an 'Edit' link next to each product listing on the Products page, or on Individual Product page.
 - Mirroring the Add Product page in design, this consistency ensures a user-friendly experience with a negligible learning curve for administrators.
 - Product updates are confirmed with an 'Update Product' button, and a 'Cancel' button is also provided to revert back to the main product listing without making changes.
 
+#### **19. Delete Product Functionality (Admin / Superuser only)**  
+- Only Admin or Superuser roles have access to the Delete Product feature. This option can be utilized by selecting the Edit link, which is present for each item on the Products page, or on the Individual Product page, provided the user is logged in as an admin.
+- Upon selecting the Delete option, a confirmation modal will appear, asking the admin for final verification before the product is removed. 
+
+![Confirmation modal before deleting a product](readme-testing-files/readme/delete-product-modal.png "Confirmation modal before deleting a product")   
+
+### **Features to be implemented in the future**
+Currently, due to constraints such as limited time, the current skill level of the developer, and other factors, certain features were not implemented in this phase. However, there is significant potential for enhancing this e-commerce website in the forthcoming development phase by incorporating additional features and functionalities. The following are key enhancements envisaged for the web app:
+1. Diversifying Payment Options:
+Presently, the website supports only card payments due to time limitations. In the next phase, it is planned to broaden the payment spectrum to include options like bank account debits, PayPal, Apple Pay, etc. This expansion will make the platform more akin to a comprehensive online shopping experience.
+2. Integrating Social Media Sign-ins:
+   Allowing users to register via their social media accounts can streamline the sign-up process and is a preferred method for many. This feature not only simplifies registration but also provides valuable demographic and psychographic data, aiding in better segmentation, targeted website design, and product offerings.
+3. Implementing Stock Management:
+Currently, the product model lacks a stock field, assuming external logistic management. Adding stock management functionality, where product availability is tracked and displayed, would be a significant improvement. Alert systems for low stock and automatic removal of out-of-stock items from the website are planned for implementation.
+4. Introducing 'Load More Products' Functionality:
+To enhance user experience, it is proposed to initially load a limited number of products, with the option for users to view more by clicking a 'Load More' button. This would expedite initial page loading. While attempts were made to introduce this feature using AJAX, challenges with integrating filters and other functionalities led to its postponement to the next development phase.
+
+## **Issues and Bugs**   
+### **Resolved Issues**   
+During the website development process, I encountered a variety of challenges and bugs. Below, I've detailed some of the more complex issues I faced, along with the effective solutions I applied to resolve them.
+1. **Issue**: Implementing a feature where the heart icon on the top left of a product image turns red for products that are in the favorite list of the currently active user. This implementation proved challenging, particularly in verifying whether a product instance is included in the user's favorites queryset.
+
+
+<br/>  
+
+## **Deployment**
+1. Create a new app on Heroku on [Heroku website](https://www.heroku.com), give it a name and choose the closest region. I named the app: footwear-fusion.  
+2. Ont the resources tab, provision a new Heroku Postgres database.  
+3. Go to Gitpod and install dj_database_url and psycopg2. 
+   ```
+   pip3 install dj_database_url
+   pip3 install psycopg2-binary
+   ```
+4. Set them in the requirements.txt to ensure Heroku installs them as our apps requirements when we deploy it.  
+   ``` 
+   pip3 freeze > requirements.txt
+   ```
+5. Set up a new database for the site by going to the project's settings.py and importing dj_database_url. Comment out the database's default configuration, and replace the default database with a call to dj_database_url.parse and pass it the database URL from Heroku (you can get it from your config variables in your app setting tab)
+   ```
+   DATABASES = {
+     'default': dj_database_url.parse('YOUR_DATABASE_URL_FROM_HEROKU')
+   }
+   ```
+6. Run migrations
+   ```
+   python3 manage.py migrate
+   ```  
+7. Import all products' data. I'm using fixtures json files, therefore I'm using loaddata.
+   ```
+   python3 manage.py loaddata categories
+   python3 manage.py loaddata subcategories
+   python3 manage.py loaddata products
+   ```
+8. Set up a new superuser, fill out the username, email address, and password.
+   ```
+   python3 manage.py create superuser
+   ```  
+9. Remove the database config from Heroku and uncomment the original config. Add a conditional statement to define that when the app is running on Heroku. we connect to Postgres, and otherwise, we connect to Sqlite.   
+   ```
+   if 'DATABASE_URL' in os.environ:
+      DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+      }
+   else:
+      DATABASES = {
+         'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+         }
+      }
+   ```  
+10. Install gunicorn which will act as the webserver, and put it on our requirements.txt.   
+   ``` 
+   pip3 install gunicorn
+   pip3 freeze > requirements.txt
+   ```
+11. Create a Procfile, to tell Heroku to create a web dyno, which will run unicorn and serve the Django app.   
+   ```
+   touch Procfile
+   ```   
+
+   Inside the Procfile:
+   ```
+   web: gunicorn Footwear_Fusion.wsgi:application
+   ```
+12. Login to Heroku through CLI, using ```heroku login```. Once logged in, disable the collect static temporarily, so that Heroku won't try to collect static files when it deploys.
+   ```
+   heroku config:set DISABLE_COLLECTSTATIC=1 --app footwear-fusion
+   ```
+   And add the hostname of the Heroku app to allowed hosts in the project's settings.py, and also add localhost so that Gitpod will still work as well:  
+   ```
+   ALLOWED_HOSTS = ['footwear-fusion.herokuapp.com', 'localhost']
+   ```   
+13. Add, commit, and push to gitpod and then to Heroku. After pushing to gitpod as usual, initialize git remote first:
+   ```
+   heroku git:remote -a footwear-fusion
+   ``` 
+   Then push to Heroku:
+   ```
+   git push heroku main
+   ```
+14. Go to the app's dashboard on Heroku and go to Deploy. Connect the app to Github by clicking Github and search for the repository. Click connect. Also enable the automatic deploy by clicking Enable Automatic Deploys, so that everytime we push to github, the code will automatically be deployed to Heroku as well.  
+15. Generate a key from [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) and add it to the convig variables in Heroku. Go back to settings.py and replace the secret key setting with the call to get it from the environment, and use empty string as a default. 
+   ```
+   SECRET_KEY = os.environ.get('SECRET_KEY', '')
+   ```
+   Set debug to be true only if there's a variable called development in the environment.
+   ```
+   DEBUG = 'DEVELOPMENT' in os.environ
+   ```
+
+<br/>  
+
+### **AWS Bucket Creation**   
+All static and media files in this project are storeed in Amazon Web Services S3 bucket (https://aws.amazon.com/) which is a cloud based storage service. You can create your own bucket by following these steps:   
+1. Go to [Amazon Web Service website](https://aws.amazon.com/) and click on Create An AWS Account, or login if you already have an account.  
+2. Login to your new account, go to AWS Management Console and find service S3. Click on Create Bucket.   
+   - Give it a name (I recommend naming your bucket to match the Heroku app name), and choose region closest to you.  
+   - In Object Ownership section, choose ACLS enabled. and Bucket Owner Preffered.   
+   - Uncheck box 'Block All Public Access'.  
+   - Check box 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'  
+   - Click on Create Bucket, and your bucket is created.  
+3. Click on your newly created bucket, and navigate to the Properties tab. Scroll down to the bottom until you find Static Website Hosting. Click on Edit, then enable. 
+   - Hosting type: choose Host a Static Website   
+   - Index document: index.html  
+   - Error document: error.html
+   - Click on Save Changes.  
+4. Navigate to the Permissions tab. Scroll down to the bottom until you find Cross-origin resource sharing (CORS). Click on Edit, and paste in this Cors Configuration below, which is going to set up the required access between the Heroku app and this S3 bucket. Click on Save Changes. 
+   ```
+   [
+      {
+         "AllowedHeaders": [
+            "Authorization"
+         ],
+         "AllowedMethods": [
+            "GET"
+         ],
+         "AllowedOrigins": [
+            "*"
+         ],
+         "ExposeHeaders": []
+      }
+   ]
+   ```   
+   Still on the Permissions tab, find Bucket policy, click on Edit, and then go to Policy Generator. 
+   - Select Type of Policy: choose S3 Bucket Policy   
+   - Effect: choose Allow   
+   - Principal: *   
+   - Actions: select GetObject   
+   - Fill in the Amazon Resource Name (ARN), from the Bucket ARN back in the Bucket Policy   
+   - Click on the Add Statement and then Generate Policy. Copy the policy and paste in the bucket policy editor.  
+   - Add a slash star on to the end of the resource key (because we want to allow access to all resources in this bucket). Click Save.
+      The resource key should look like this
+      ```  
+      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*",  
+      ```  
+
+   Still on Permissions tab, go to Access Control List (ACL) section, click Edit and enable List for Everyone (public access), and accept the warning box.  
+
+5. With the bucket ready, now we need to create a user to access it through another service called IAM which stands for Identity and Access Management. Go back to the service menu and open IAM.   
+   a. Create a group for our user to live in.  
+      Click User Groups, and then create a new group with a name you want. I gave the group the name: manage-footwear-fusion. Scroll down to the bottom and click on Create Group.     
+   b. Create an access policy giving the group access to the S3 bucket that has been created.  
+      - Click on Policy, and then Create Policy. Go to the JSON tab, and then select import managed policy, which will let us import one that AWS has pre-built for full access to S3. Search for S3, then import the AmazonS3FullAccess policy.   
+      - Because we only want to allow full access to our new bucket and everything within it, paste the bucket ARN (from the bucket policy page in s3) in the JSON editor.
+      ```
+      "Resource": [
+         "arn:aws:s3:::YOUR_BUCKET_NAME",
+         "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+      ]
+      ```  
+      Now click on Next:Tags, then click Next:Review. 
+      - Give the review policy a name and a description, then click Create Policy. The policy has now been created. 
+
+   c. Finally, assign the user to the group so it can use the policy to access all our files.  
+      - Go to User Groups, and select the group. Go to the Permissions tab, open the Add Permissions dropdown, and click Attach Policies.  
+      - Select the policy and click Add permissions at the bottom.  
+      - Create a user to put in the group, by going to the Users page, and clicking Add Users.  
+      - Set a user name, give them access type: Programmatic access, and then click Next: Permissions.   
+      - Check on the group that has the policy attached. Click Next: Tags, then click Next: Review, and lastly Create User.     
+      - Download the csv file and save it.  
+
+### **Connect Django to AWS Bucket**   
+1. Install two new packages: boto3 and django-storages. Freeze them into requirements.txt.   
+   ```
+   pip3 install boto3
+   pip3 install django-storages 
+   pip3 freeze > requirements.txt  
+   ```  
+2. Add storages to the Installed Apps in settings.py.
+3. In settings.py, we need to set cache control, set bucket configurations, set static and media files location, and override static and media URLs in production. We'll only want to do this on Heroku, so add an if statement as well.
+   ```
+   if 'USE_AWS' in os.environ:
+       # Cache control
+      AWS_S3_OBJECT_PARAMETERS = {
+         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+         'CacheControl': 'max-age=94608000',
+      }
+
+      # Bucket Config
+      AWS_STORAGE_BUCKET_NAME = 'YOUR_BUCKET_NAME'
+      AWS_S3_REGION_NAME = 'YOUR_REGION'
+      AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+      AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+      AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+      # Static and media files
+      STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+      STATICFILES_LOCATION = 'static'
+      DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+      MEDIAFILES_LOCATION = 'media' 
+      # Override static and media URLs in production
+      STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+      MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+   ```
+   Set the Config Vars on Heroku. On your app's dashboard on Heroku, go to Settings and click Reveal Convig Vars. Set this variables:
+   Variables | Value
+   --- | ---
+   AWS_ACCESS_KEY_ID | your access key id from the csv file that you've downloaded before
+   AWS_SECRET_ACCESS_KEY | your secret access key from the csv file that you've downloaded before
+   USE_AWS | True    
+
+   Also remove the COLLECTSTATIC variable from the Config Vars.   
+
+4. We then want to tell Django that in production we want to use S3 to store our static files whenever someone runs collectstatic, and that we sent any uploaded images to go there as well.  
+Create a custom_storages.py file in your project's root directory, and inside it, include the Static and Media Storage locations: 
+   ```
+   from django.conf import settings
+   from storages.backends.s3boto3 import S3Boto3Storage
+ 
+   class StaticStorage(S3Boto3Storage):
+      location = settings.STATICFILES_LOCATION
+   class MediaStorage(S3Boto3Storage):
+      location = settings.MEDIAFILES_LOCATION
+   ```  
+   5. Finally, push these changes on Github.
+
+   ```
+   git add .
+   git commit -m "Your commit message"
+   git push
+   ```  
 
 
 
+CREDITS
+Error page image: Freepik
 
 
 
