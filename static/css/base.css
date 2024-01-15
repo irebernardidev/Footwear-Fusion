@@ -176,8 +176,8 @@ footer {
 .logo {
     background: url('/static/images/logo.png') no-repeat center center;
     background-size: contain;
-    height: 90px;
-    width: 110px;
+    height: 100px;
+    width: 120px;
 }
 
 .btn-bottom {
