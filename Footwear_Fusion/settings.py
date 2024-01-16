@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.exists('env.py'):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -136,7 +139,7 @@ else:
    DATABASES = {
       'default': {
          'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
       }
    }
 
@@ -218,7 +221,7 @@ FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 
 # Stripe
-STRIPE_CURRENCY = 'usd'
+STRIPE_CURRENCY = 'EUR'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
