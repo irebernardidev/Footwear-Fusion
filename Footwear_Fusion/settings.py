@@ -27,7 +27,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'some_default_value')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['footwear-fusion-9bb895189ceb.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'footwear-fusion-9bb895189ceb.herokuapp.com', 
+                 'localhost']
 
 
 # Application definition
