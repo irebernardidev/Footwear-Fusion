@@ -73,7 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'middleware.AllowIframingMiddleware',
+    'Footwear_Fusion.middleware.AllowIframingMiddleware',
 ]
 
 ROOT_URLCONF = 'Footwear_Fusion.urls'
