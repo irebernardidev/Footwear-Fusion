@@ -1,4 +1,4 @@
-/* StripeElement Styles */
+/* StripeElement Styles*/
 .stripe-style-input {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -97,10 +97,10 @@
     .form-check, 
     .ElementsApp, 
     .ElementsApp .InputElement {
-    font-size: 14px;
+        font-size: 14px;
     }
 
     .order-confirmation-wrapper img {
-    width: 100%;
+        width: 100%;
     }
 }

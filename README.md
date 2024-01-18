@@ -112,6 +112,8 @@ The primary objectives of the site owner include:
   2. Modify or update product details.
   3. Remove products from the listing.
 
+[Back to top &uarr;](#table-of-contents)  
+
 <br/>  
 
 ### **B. Scope Plane**  
@@ -162,6 +164,8 @@ The design distinctly differentiates the access levels between unregistered and 
 
 All the aforementioned functionalities are accessible only to users with a registered account.
 
+[Back to top &uarr;](#non-functional-requirements)  
+
 <br/>  
 
 ### **D. Skeleton Plane**  
@@ -188,6 +192,8 @@ The original wireframes were foundational in shaping the final design, however, 
 
 - The logo underwent a transformation to a bolder version for enhanced visibility, addressing the issue that the initial, finer logo was not as prominent on smaller screens.
 - Additional refinements included alterations in button colors and image selections, which were part of the creative evolution during the development process.
+
+[Back to top &uarr;](#user-goals)  
 
 <br/>
 
@@ -408,7 +414,11 @@ This section addresses typical questions related to payment, orders, returns, an
 - Only Admin or Superuser roles have access to the Delete Product feature. This option can be utilized by selecting the Edit link, which is present for each item on the Products page, or on the Individual Product page, provided the user is logged in as an admin.
 - Upon selecting the Delete option, a confirmation modal will appear, asking the admin for final verification before the product is removed. 
 
-![Confirmation modal before deleting a product](readme-testing-files/readme/delete-product-modal.png "Confirmation modal before deleting a product")   
+![Confirmation modal before deleting a product](readme-testing-files/readme/delete-product-modal.png "Confirmation modal before deleting a product")  
+
+[Back to top &uarr;](#17-product-management--add-product-page-admin--superuser-only)  
+
+<br/>
 
 ### **Features to be implemented in the future**
 Currently, due to constraints such as limited time, the current skill level of the developer, and other factors, certain features were not implemented in this phase. However, there is significant potential for enhancing this e-commerce website in the forthcoming development phase by incorporating additional features and functionalities. The following are key enhancements envisaged for the web app:
