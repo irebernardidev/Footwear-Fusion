@@ -444,6 +444,74 @@ During the website development process, I encountered a variety of challenges an
 
 <br/>  
 
+## **TECHNOLOGY USED**  
+### **Main Language**   
+   * [HTML5](https://en.wikipedia.org/wiki/HTML5)   
+   * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)   
+   * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)   
+   * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))   
+### **Libraries and Frameworks**  
+   * [Django](https://flickity.metafizzy.co/)   
+   Utilized for building carousels on the Home Page. 
+   * [Django Template](https://jinja.palletsprojects.com)  
+   Employed as the templating engine in Django for rendering backend data in HTML.   
+   * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
+   Applied throughout the site to enhance styling and responsiveness. 
+   * [Google Fonts](https://fonts.google.com)  
+   Integrated into the site to import and utilize various fonts.  
+   * [Font Awesome](https://fontawesome.com)  
+   Used extensively to incorporate icons, enhancing both aesthetics and user experience.
+   * [jQuery 3.6.0](https://jquery.com/)  
+   A JavaScript library that simplified writing JavaScript code.
+   * [Flickity](https://flickity.metafizzy.co/)   
+   Implemented for carousel functionality on the Home Page.  
+### **Packages / Dependecies Installed**   
+   * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
+   Facilitated user authentication, registration, and account management.
+   * [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/)   
+   Utilized for managing the rendering behavior of forms.  
+   * [Django Countries](https://pypi.org/project/django-countries/)   
+   Provided a country field for models and country choices for forms.
+   * [Pillow](https://pypi.org/project/Pillow/)  
+   Added image processing capabilities to the project.
+   * [Gunicorn](https://gunicorn.org/)  
+   Served as a Python WSGI HTTP Server for UNIX, supporting the Django application's deployment.  
+### **Database Management**  
+   * [SQLite](https://www.sqlite.com/index.html)   
+   Used as a lightweight, file-based database during development.
+Heroku Postgres
+   * [Heroku Postgres](https://www.heroku.com/postgres)   
+   Deployed in production, offering robust database services based on PostgreSQL by Heroku.
+### **Payment Service**  
+   * [Stripe](https://stripe.com/en-gb-nl)  
+   Integrated to handle online payment processing for website transactions. 
+### **Cloud Storage**  
+   * [Amazon Web Service S3](https://aws.amazon.com/s3/)
+   Employed for storing all static and media files in the production environment.
+### **Tools and Programs**  
+   * [Git](https://git-scm.com)  
+   Leveraged for version control through the Gitpod terminal, enabling commits to Git and pushes to GitHub.  
+   * [GitHub](https://github.com)  
+   Served as the code repository following pushes from Git.
+   * [Heroku](https://www.heroku.com)   
+   Chosen as the platform for deploying the website.
+   * [Autoprefixer CSS](https://autoprefixer.github.io)  
+   Ensured cross-browser compatibility of CSS rules through vendor prefixing.  
+   * [Am I Responsive](ami.responsivedesign.is)  
+   Provided previews of the website on various popular devices.  
+   * [Tiny JPG](https://tinyjpg.com) and [Tiny PNG](https://tinypng.com)    
+   Optimized image file sizes for improved website performance. 
+   * [Coolors](https://coolors.co)  
+   Assisted in developing a harmonious color scheme for the website.
+   * [Visual Studio Code](https://code.visualstudio.com/)  
+   The primary tool for writing code, creating files, and developing pages for the project.
+   * [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)  
+   Crucial in the testing phase for assessing the site's responsiveness and identifying any bugs.
+   * [Favicon](https://www.favicon.cc/)  
+   Utilized to create a favicon, aiding users in quickly identifying the website among multiple open tabs or bookmarks.
+
+<br/>  
+
 ## **Deployment**  
 The project was developed using Gitpod as the IDE, committed to Git as a local repository, and pushed/ stored to GitHub. The web application is deployed on Heroku because we can't host a Python project on Github pages, with static and media files stored in AWS S3. The repository itself is hosted on Github.  
 
