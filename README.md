@@ -175,7 +175,7 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed to outline th
 
 #### **Color Scheme**  
 The website's design language is articulated through a color palette that captures the essence of tranquility and natural beauty. Each hue is carefully chosen to create an ambiance that is both calming and welcoming, with a subtle infusion of warmth that conjures a sense of peace and serenity.
-At the heart of the palette featured on [Coolors](https://coolors.co) is a soft blush pink (#F5CAC3), radiating a gentle and hospitable vibe. It's paired with an effervescent coral (#F28482), which injects the layout with a lively yet cozy warmth, resonating with a cheerful and dynamic spirit. Grounding these effusive tones, the muted teal (#84A59D) lends an earthy depth to the aesthetic, echoing the brand's connection to natural elements and understated elegance.
+At the heart of the palette featured on [Coolors](https://coolors.co), is a gentle cream tone (#F7EDE2), emanating a soft and welcoming aura. Complementing this, a delicate blush pink (#F5CAC3) is selectively employed in minor sections for subtle accents, adding a nuanced layer to the overall aesthetic. Alongside, an effervescent coral (#F28482) injects the layout with a lively yet cozy warmth, resonating with a cheerful and dynamic spirit. Grounding these effusive tones, the muted teal (#84A59D) lends an earthy depth to the aesthetic, echoing the brand's connection to natural elements and understated elegance.
 
 The selection of these colors transcends mere visual pleasure; it is a deliberate strategy to elicit a psychological sense of ease and contentment among visitors. This chromatic harmony is woven consistently throughout the website’s interface, from the tactile feedback of interactive elements to the enchanting allure of the hero image. Each detail is steeped in these colors, crafting a cohesive and engaging digital narrative that guides the user through an effortlessly integrated visual experience.
 ![The color scheme](readme-testing-files/readme/color-scheme.png "The color scheme")
@@ -280,12 +280,17 @@ Each model is crafted to not only store essential data but also to create a seam
 
 - **Toast Notifications:**   
 Toast notifications serve as an interactive feedback mechanism for users, confirming the success or alerting to the failure of their actions. These notifications are color-coded for clarity: red signifies errors, blue for informational alerts, yellow for warnings, and green indicates successful actions. Typically, users will encounter the green success toasts most frequently, such as when adding items to the shopping bag, complemented by a visual cue of the bag itself. For other successful actions like adding items to the favorites list, a success toast appears sans the bag icon. Here are examples of the success toast notifications, with and without the bag icon display.   
+
 ![Success toast message - without bag display](readme-testing-files/readme/toast-success-nobag.png "Success toast message - without bag display")
 ![Success toast message - with bag display](readme-testing-files/readme/toast-success.png "Success toast message - with bag display")   
 
+- **Error Pages:**
+Custom error pages for 403 (Forbidden), 404 (Not Found), and 500 (Internal Server Error) have been implemented to enhance user experience during encounters with these errors. These pages provide clear information about the error and offer straightforward navigation options to return to the homepage, ensuring users remain informed and can easily continue their browsing.
+
+![404 Error Page](readme-testing-files/readme/404-error.png "404 Error Page")
 
 ### **B. Page Features**  
-#### **1. Home Page**  
+#### **1. Home Page** 
 [View the Homepage layout here](readme-testing-files/readme/home-page.png)   
 - The Home page engages visitors immediately with a dynamic array of images, serving as a visual lure to explore further and encouraging purchases.
 - A full-screen hero image sets a striking tone, featuring a prominent jumbotron heading that delivers a memorable first impression. This element highlights the latest seasonal offerings, along with a call-to-action (CTA) button that guides users straight to the new arrivals. 
