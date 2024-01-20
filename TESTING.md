@@ -57,48 +57,48 @@ As a shopper I want to be able to:
 
 5. *Browse through all products and smoothly transition between different categories.*
 
-This website features three primary categories: Women, Men, and Kids. Upon selecting a category, users are presented with all relevant subcategories such as Boots, Sneakers, Flats, etc. For desktop users, a side navigation bar enhances the browsing experience, allowing for seamless transitions between categories and subcategories. In the mobile version, this side navigation is conveniently replaced by a dropdown menu for optimal usability. Additionally, Breadcrumb Navigation is implemented across the platform, enabling users to easily backtrack to broader categories.
+This website is organized into three primary categories: Women, Men, and Kids. When users select a category, it reveals a list of subcategories within it, such as Boots, Sneakers, Flats, and more. On desktop, a convenient side navigation menu enhances the user experience, enabling seamless transitions between categories and subcategories. On mobile devices, the side navigation transforms into a dropdown menu for user-friendly navigation. Additionally, a Breadcrumb Navigation feature is provided, allowing users to easily navigate back to broader categories for added convenience.
 
 ![Navigation - desktop](readme-testing-files/testing/user-stories/navigation.png "Navigation - desktop")   
 ![Navigation - mobile](readme-testing-files/testing/user-stories/navigation-mobile.png "Navigation - mobile")  
 
 6. *Organize products by price, rating, or popularity.*
 
-The sorting feature is located at the top-left corner of the products page.
+The sorting feature is located in the top-left corner of the products page.
 
 ![Sort functionality](readme-testing-files/testing/user-stories/sort.png "Sort functionality")  
 
 7. *Explore detailed information on individual product pages.*
 
-Users have the option to click on a product image, which will redirect them to the Individual Product page. Here, they can access all pertinent information related to the product.
+By clicking on the product image, users will be redirected to the Individual Product page, where they can access comprehensive details related to the product.
 
 ![Product's information](readme-testing-files/testing/user-stories/product-info.png "Product's information")   
 
 8. *Access reviews for products.*
 
-On the Individual Product page, users have the ability to scroll beneath the product information to find customer reviews.
+Users can scroll down on the Individual Product page to discover the product's reviews situated beneath its information.
 
 ![Product's reviews](readme-testing-files/testing/user-stories/reviews.png "Product's reviews") 
 
 9. *Conveniently choose product size and quantity, and add them to the shopping bag.*
 
-To purchase an item, users can conveniently choose the desired size and number of units. After making their selections, they simply click the Add To Bag button to complete the transaction.
+Customers have the convenience of effortlessly choosing their desired size and quantity, followed by a simple click on the "Add To Bag" button to make a purchase.
 
 ![Select Size and Quantity](readme-testing-files/testing/user-stories/select-size.png "Select Size and Quantity")  
 
 10. *View the contents of the shopping bag.*
 
-When an item is added to the shopping cart, a brief notification will automatically appear in the upper right corner of the screen. This message alerts the user that the product has been successfully included in their order.
+When users add a product to their shopping bag, a notification toast will appear in the top-right corner to provide information about the shopping bag's status.
 
 ![Shopping Bag Toast](readme-testing-files/readme/toast-success.png "Shopping Bag Toast")  
 
-Users can access their shopping cart in two ways. They can click the "Shopping Bag" link in the top navigation bar at any time. Additionally, after an item is added, a confirmation popup appears with a "Go To Shopping Bag" button that will directly take them to the cart page.
+Users have the option to access the Shopping Bag page through two methods: either by selecting the "Shopping Bag" option in the Navigation Bar or by clicking the "Go To The Shopping Bag" button located within the toast notification.
 
 ![Shopping Bag Page](readme-testing-files/testing/user-stories/bag.png "Shopping Bag Page") 
 
 11. *Modify the shopping bag by changing product quantities or removing items.*
 
-From their shopping cart, users can seamlessly edit the amount they wish to purchase by choosing a new quantity in the dropdown menu. The subtotal will automatically update to reflect these changes. Additionally, if a customer decides to remove an item from their order, they simply click the trash icon next to that product to eliminate it from their cart.
+Customers have the convenience of effortlessly modifying the product quantity by simply choosing the desired quantity. As a result, the Subtotal will automatically adjust to reflect this change. In the event that users wish to remove a product from their shopping bag, they can do so by clicking on the Trash icon.
 
 ![Adjust Bag](readme-testing-files/testing/user-stories/bag-adjust.png "Adjust Bag") 
 
@@ -106,24 +106,66 @@ From their shopping cart, users can seamlessly edit the amount they wish to purc
 
 13. *Be assured of the security of personal and payment information.*
 
-Users can finalize their purchases by selecting the "Secure Checkout" button on the shopping cart page. This will direct them to the checkout screen. The payment fields are conveniently split into sections for the card number, expiration date, CVC security code, and billing zip code to streamline the payment process.
+Upon selecting the 'Secure Checkout' button located on the Shopping Bag page, users will be seamlessly redirected to the Checkout page. Within the payment section, the card payment details are conveniently organized into separate fields for card number, expiration date, CVC, and zip code entry.
 
 ![Checkout form](readme-testing-files/testing/user-stories/checkout-information.png "Checkout form")  
 
 14. *Receive confirmation of orders post-purchase.*
 
-Once users complete the checkout form and select the "Complete Order" button, they will be taken to an order confirmation page summarizing their purchase details. Simultaneously, they will receive an email confirmation containing their order information in their inbox for their records.
+Once users have completed the checkout form and clicked the 'Complete Order' button, they will be seamlessly redirected to a confirmation page displaying their order details. Simultaneously, they will receive an order confirmation email in their inbox.
 
 ![Order confirmation](readme-testing-files/testing/user-stories/order-confirmation.png "Order confirmation")  
 
 15. *Get email notifications confirming purchases.*
 
+As previously mentioned, users will receive an email confirmation in their inbox each time they successfully place an order.
+
+![Email confirmation](readme-testing-files/testing/user-stories/email.png "Email confirmation")  
+
 16. *Engage with informative articles or blogs about shoes and accessories.*
+
+Users have the option to access the Articles page through two pathways: either by clicking the articles link in the footer or by navigating from the homepage. Once on the Articles page, they can select and view an article by simply clicking on their desired choice.
+
+![All articles](readme-testing-files/testing/user-stories/articles.png"All articles")  
+   ![Individual article](readme-testing-files/testing/user-stories/individual-article.png "Individual article")  
+
 
 17. *Navigate the site with ease using the Navigation Bar and Footer.*
 
+The website features a consistent Navigation Bar and Footer across all pages to enhance user navigation. The Navigation Bar is affixed to the top of the screen, ensuring it remains visible as users scroll down, providing convenient access to navigate the entire site.
+
+For desktop users, the Navigation Bar and Footer are displayed as follows:
+
+![Navbar on desktop](readme-testing-files/readme/navbar-desktop.png "Navbar on desktop")   
+
+![Footer on desktop](readme-testing-files/readme/footer-desktop.png "Footer on desktop")   
+
+On the other hand, for mobile users, the Navigation Bar and Footer are presented as follows:
+
+![Navbar on mobile](readme-testing-files/testing/user-stories/navbar-mobile.png "Navbar on mobile") 
+
+![Footer on mobile](readme-testing-files/testing/user-stories/footer-mobile.png "Footer on mobile")     
+
+
 18. *Register for an account without hassle.*
+
+To access registration or login options on the website, users can simply click the 'Sign In' link located on the left side of the Navbar when using a desktop computer. On mobile devices, they can achieve the same by tapping the user icon. These actions will lead users to either the Register/Sign Up page or the Log In page, depending on their choice.
+
+![Register](readme-testing-files/testing/user-stories/register.png "Register")
+
+![Log In](readme-testing-files/testing/user-stories/login.png "Log In")   
+
 
 19. *Locate a FAQ section for inquiries.*
 
+Users can locate the link to access the FAQ page within the website's footer.
+
+![FAQ](readme-testing-files/testing/user-stories/faq.png "FAQ") 
+
 20. *Contact the store through an accessible contact form.*
+
+Users can also locate the link to access the contact page within the footer section.
+
+![Contact form](readme-testing-files/testing/user-stories/contact-form.png "Contact form")   
+
+<br/>
