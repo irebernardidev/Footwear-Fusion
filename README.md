@@ -79,7 +79,7 @@ The primary objectives of the site owner include:
   3. Effortlessly search for specific products.
   4. Observe a preview of the most popular products.
   5. Browse through all products and smoothly transition between different categories.
-  6. Organize products by price, rating, or color.
+  6. Organize products by price, rating, or popularity.
   7. Explore detailed information on individual product pages.
   8. Access reviews for products.
   9. Conveniently choose product size and quantity, and add them to the shopping bag.
