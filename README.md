@@ -14,40 +14,40 @@ This innovative website marks the culmination of the Code Institute's Milestone 
 <br/>  
 
 ## **Table of Contents**   
-1. [UX Development Planes]()   
-   A. [Strategy Plane]() 
-      - [Project Goals, User Goals, and Site Owner Goals]()   
-      - [User Stories]()   
-   B. [Scope Plane]()  
-   C. [Structure Plane]()  
-   D. [Skeleton Plane (Wireframes)]()  
-      - [Color Scheme]()  
-      - [Typography]()  
-2. [Database Design]()  
-3. [Features]()   
-   A. [General Design Features]()   
-   B. [Page Features]()  
-   C. [Features to be Implemented in The Future]()
-4. [Testing]()    
-   - [Go to TESTING.md]
-5. [Issues and Bugs]()  
-   - [Solved Issues]()  
-   - Known Issues & Unsolved Bugs 
-6. [Technology Used]()
-   - Main Languanges  
-   - Libraries and Frameworks  
-   - Database Management  
-   - Tools and Programs   
-7. [Deployment]()  
-   A. [How To Use This Project]()  
-   B. [Deployment to Heroku]()   
-   C. [AWS Bucket Creation]()  
-   D. [Connect Django to AWS Bucket]()  
-8. [Credits]()
-   - Code
-   - Contents
-   - Images
-9. [Acknowledgements]()
+1. [UX Development Planes](#ux-development-plane)   
+   A. [Strategy Plane](#a-strategy-plane) 
+      - [Project Goals, User Goals, and Site Owner Goals](#project-goals)   
+      - [User Stories](#user-stories)   
+   B. [Scope Plane](#b-scope-plane)  
+   C. [Structure Plane](#c-structure-plane)  
+   D. [Skeleton Plane (Wireframes)](#d-skeleton-plane)  
+      - [Color Scheme](#color-scheme)  
+      - [Typography](#typography)  
+2. [Database Design](#database-design)  
+3. [Features](#features)   
+   A. [General Design Features](#a-general-design-features)   
+   B. [Page Features](#b-page-features)  
+   C. [Features to be Implemented in The Future](#features-to-be-implemented-in-the-future)
+4. [Testing](#testing)    
+   - [Go to TESTING.md]()
+5. [Issues and Bugs](#issues-and-bugs)  
+   - [Solved Issues](#resolved-issues)  
+   - [Known Issues & Unsolved Bugs]()
+6. [Technology Used](#technology-used)
+   - [Main Languanges](#main-languages) 
+   - [Libraries and Frameworks](#libraries-and-frameworks)
+   - [Database Management](#database-management)  
+   - [Tools and Programs](#tools-and-programs) 
+7. [Deployment](#deployment)  
+   A. [How To Use This Project](#a-how-to-use-this-project)  
+   B. [Deployment to Heroku](#b-deployment-to-heroku)   
+   C. [AWS Bucket Creation](#c-aws-bucket-creation)  
+   D. [Connect Django to AWS Bucket](#d-connect-django-to-aws-bucket)  
+8. [Credits](#credits)
+   - [Code](#code)
+   - [Contents](#contents)
+   - [Images](#images)
+9. [Acknowledgements](#acknowledgements)
 
 ------
 
@@ -435,6 +435,12 @@ Presently, the website supports only card payments due to time limitations. In t
 Currently, the product model lacks a stock field, assuming external logistic management. Adding stock management functionality, where product availability is tracked and displayed, would be a significant improvement. Alert systems for low stock and automatic removal of out-of-stock items from the website are planned for implementation.
 4. Introducing 'Load More Products' Functionality:
 To enhance user experience, it is proposed to initially load a limited number of products, with the option for users to view more by clicking a 'Load More' button. This would expedite initial page loading. While attempts were made to introduce this feature using AJAX, challenges with integrating filters and other functionalities led to its postponement to the next development phase.
+
+
+## **Testing**
+I have performed thorough testing of the website to ensure its functionality and compatibility with various browsers and devices. Additionally, I have conducted user research and conducted usability tests to identify areas for improvement and optimize the user experience.
+The complete documentation of these tests is available for review [here]().
+
 
 ## **Issues and Bugs**   
 ### **Resolved Issues**   
@@ -833,8 +839,33 @@ Create a custom_storages.py file in your project's root directory, and inside it
 
 ## **CREDITS**   
 
-Error page image: Freepik
 
-Articles
+### **A. Code**
+- The Boutique Ado project featured in the Code Institute's video served as the primary reference for establishing an e-commerce/online store project. This setup utilized a range of technologies including HTML, CSS, JavaScript, Python with Django, PostgreSQL for database management, Stripe for payment processing, and AWS S3 for storage solutions.
 
+- The tutorial by Patrick Loeber provided an invaluable resource for learning how to debug code using breakpoints, which can be found here: https://www.youtube.com/watch?v=aZJnGOwzHtU.
+
+- The star rating system implemented on the Add Review and Edit Review pages is inspired by a method detailed in this [article](https://codeconvey.com/feedback-form-in-html/). This approach transforms radio button input elements into a 1 to 5 star rating system.
+
+### **B. Images**
+Product images across the website were obtained from various free image sources, including:
+- [Pexels](https://www.pexels.com/)
+- [Freepik](https://www.freepik.com/)
+- [Unsplash](https://unsplash.com/)
+- [Kaggle](https://www.kaggle.com/)
+
+Additionally, the website's logo was initially designed using a template from [FlamingText](https://www4.flamingtext.com/). It was then customized to incorporate the website's color scheme and modified to enhance contrast for a more distinct and cohesive visual identity.
+
+### **C. Content**
+**Articles / Blog Posts**
+
+- "The Resurgence of $45 Sneakers from the '90s" - This article discusses the major comeback of a popular '90s sneaker trend. [Original source](https://news.yahoo.com/forgotten-45-sneakers-90s-making-212402565.html).
+
+- "Top Paint Markers for Bag and Shoe Customization" - This piece explores the best paint markers for designing bags and shoes. [Learn more](https://www.ehow.com/about_4706948_paint-markers-use-shoe-designs.html).
+
+- "Ways to Make Your All-Weather Boots More Fashionable" - Tips on enhancing the style of all-weather boots. [Further details](https://www.theartofaccessories.com/ways-to-make-your-all-weather-boots-more-fashionable/).
+
+- "The Ultimate Guide to Spring Style for Men" - An extensive guide to men's fashion trends for the spring. [Source](https://theessentialman.com/ultimate-guide-spring-style-men/).
+
+## **ACKNOLEDGMENTS**  
 
