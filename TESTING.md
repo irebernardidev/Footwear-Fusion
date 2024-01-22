@@ -1,8 +1,8 @@
 # **Footwear Fusion - Testing**  
 
-[Back to the main README.md file](../FootwearFusion-README.md)
+[Back to the main README.md file](../Footwear-Fusion-README.md)
 
-[Back to the Testing section in main README.md file](FootwearFusion-README.md#testing)
+[Back to the Testing section in main README.md file](Footwear-Fusion-README.md#testing)
 
 [View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
 
@@ -238,6 +238,8 @@ Users can edit or delete their product reviews. To do so, they can navigate to t
 
 ![Edit review](readme-testing-files/testing/user-stories/edit-review.png "Edit review") 
 
+![Modal to delete review](readme-testing-files/testing/user-stories/modal-delete-review.png "Modal to delete review")  
+
 8. *Place products in a wishlist for convenient access to items I'm interested in buying.*
 
 Users can add products to their wishlist by clicking the heart icon on each product, which turns red to indicate the item is in their favorites.
@@ -252,7 +254,7 @@ Accessing the 'Favorites' page via the Navbar (heart icon on mobile), users can 
 
 ![Favorites](readme-testing-files/testing/user-stories/favorites.png "Favorites")    
 
-**B. As an admin and store management, I want to be able to:**
+**C. As an admin and store management, I want to be able to:**
 
 1. *Add new products to the inventory.*
 
