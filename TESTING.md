@@ -1,6 +1,6 @@
 # **Footwear Fusion - Testing**  
 
-[Back to the main README.md file](FootwearFusion-README.md)
+[Back to the main README.md file](../FootwearFusion-README.md)
 
 [Back to the Testing section in main README.md file](FootwearFusion-README.md#testing)
 
@@ -26,10 +26,22 @@
 6. [Pep8 Online Testing](#6-pep8-online-testing)  
 7. [Lighthouse Testing](#7-lighthouse-testing)  
 
-The website was extensively tested during the development by using:
-- console.log() and developer tools for front-end  
-- printing variables to the terminal for back-end  
-- manual testing and developing based on the user stories  
+<br/>
+
+The website underwent thorough testing throughout and after its development phase, utilizing various methods detailed below. This testing was integral to ensuring the website's functionality and reliability.
+
+- **Front-End Testing**: Utilized ```console.log()``` and browser developer tools for real-time debugging and analysis.
+
+- **Back-End Testing**: Implemented variable printing to the terminal to monitor back-end processes and data handling.
+
+- **User Story-Based Manual Testing**: Conducted hands-on testing and refinement in alignment with defined user stories to ensure user-centric functionality.
+
+- **Automated Testing with Django**: Employed Django's automated testing framework towards the end of the development cycle to validate code integrity and application behavior.
+
+- **Additional Testing Methods**: Engaged in various other testing procedures using specific software tools to further ensure the robustness of the website.
+
+Below is the documentation of these testing processes.
+
 
 ### **1. User Stories Testing**  
 
@@ -174,3 +186,133 @@ Users can also locate the link to access the contact page within the footer sect
 <br/>
 
 **B. As a registered user/ shopper, I want to be able to:**
+
+1. *Access all functionalities available to non-registered shoppers.*
+
+All functionalities available to unregistered shoppers are also accessible to registered users who are logged in.
+
+2. *Log in and log out with ease.*
+
+Users logged in can easily log out by clicking the user icon located on the left side of the Navbar.
+
+![Logout link](readme-testing-files/testing/user-stories/logout-link.png "Logout link")   
+
+3. *Promptly recover forgotten passwords.*
+
+On the Log In page, users have the option to reset their password. Clicking the designated link below the login buttons will redirect them to the password reset page.
+
+![Password reset](readme-testing-files/testing/user-stories/password-reset.png "Password reset") 
+
+![Password reset email link](readme-testing-files/testing/user-stories/password-reset-2.png "Password reset")  
+
+4. *Get email confirmations upon registration.*
+
+Upon successful registration, users are prompted to check their email inbox for a verification message from Footwear Fusion. This email contains a link for verifying their email address. Clicking on this link will redirect them back to the website to confirm their email address.
+
+ ![Email verification 1](readme-testing-files/testing/user-stories/email-verify-1.png "Email verification 1")   
+
+ ![Email verification 2](readme-testing-files/testing/user-stories/email-verify-2.png "Email verification 2")    
+
+ ![Email verification 3](readme-testing-files/testing/user-stories/email-verify-3.png "Email verification 3")      
+
+5. *Manage a personal user profile to view order history and update personal details.*
+
+Users can access their personalized profile by clicking on 'My Account' in the Navbar or the user icon on mobile. The profile page includes tabs for 'My Information', 'My Purchases', and 'Ratings/Reviews', allowing users to update their information, view order history, and manage their reviews.
+
+![Update information](readme-testing-files/testing/user-stories/profile-information.png "Update information")  
+![Order history](readme-testing-files/testing/user-stories/profile-orderhistory.png "Order history")   
+
+6. *Submit reviews for previously purchased products.*
+
+Users can review previously purchased products by navigating to the 'Ratings/Reviews' tab on their profile page and clicking the 'Give Review' button.
+
+![Products to be reviewed](readme-testing-files/testing/user-stories/profile-reviews.png "Products to be reviewed")
+
+![Add review](readme-testing-files/testing/user-stories/add-review.png "Add review")  
+
+7. *Modify or delete personal reviews.*
+
+Users can edit or delete their product reviews. To do so, they can navigate to the Individual Product page, where they'll find 'Edit' and 'Delete' buttons under their review. Editing a review takes them to a page with pre-populated review content, while deleting a review prompts a confirmation modal.
+
+![Review](readme-testing-files/testing/user-stories/review.png "Review")  
+
+![Edit review](readme-testing-files/testing/user-stories/edit-review.png "Edit review") 
+
+8. *Place products in a wishlist for convenient access to items I'm interested in buying.*
+
+Users can add products to their wishlist by clicking the heart icon on each product, which turns red to indicate the item is in their favorites.
+
+![Heart icon to add to favorites](readme-testing-files/testing/user-stories/heart-icon.png "Heart icon to add to favorites") 
+
+9. *Remove products from the wishlist, so I can remove products I don't wish to purchase.*
+
+10. *Transfer products from the wishlist to the shopping bag effortlessly.*
+
+Accessing the 'Favorites' page via the Navbar (heart icon on mobile), users can view all items in their wishlist. Products can be removed by clicking the Trash-can icon or added to the shopping bag by selecting a size and clicking the 'Add to Bag' button.
+
+![Favorites](readme-testing-files/testing/user-stories/favorites.png "Favorites")    
+
+**B. As an admin and store management, I want to be able to:**
+
+1. *Add new products to the inventory.*
+
+I can add a new product to the website by logging in with admin credentials, navigating to 'My Account', and selecting 'Product Management'. This leads me to the 'Add Products' page, where I fill out the product details and submit it using the 'Add Product' button.
+
+![Add product](readme-testing-files/testing/user-stories/add-product.png "Add product")   
+
+2. *Modify or update product details.*
+
+To edit a product, I log in as admin, go to either the 'Products' page or an 'Individual Product' page, and click the 'Edit' link. This action redirects me to the 'Edit Products' page, where I can update the product information and confirm the changes by clicking the 'Edit Product' button.
+
+![Edit and Delete product](readme-testing-files/testing/user-stories/admin-edit-delete.png "Edit and Delete product")   
+
+3. *Remove products from the listing.*
+
+For product deletion, I log in as admin, navigate to the 'Products' page or the 'Individual Product' page, and click the 'Delete' link. A confirmation modal appears, and I can complete the deletion process by clicking the 'Yes, Delete' button.
+
+![Edit and Delete product](readme-testing-files/readme/delete-product-modal.png "Edit and Delete product")   
+
+
+### **2. Auto Prefixer CSS**   
+[Autoprefixer CSS](https://autoprefixer.github.io/) was used to add CSS vendor prefixes to the CSS rules after the developing process was done, to ensure that the they work across all browsers.  
+
+<br/>  
+
+### **3. Manual Testing by The Developer**  
+#### **Browsers Compatibility**   
+The website underwent testing across various browsers, including Google Chrome, Microsoft Edge, Opera, Mozilla Firefox, and Safari (iOS).
+
+#### **Devices**  
+The site was viewed and assessed on multiple devices, such as:
+- Macbook Air 2017 13 inch screen.
+- Mobile: iPhone 14 Pro, iPhone XR, iPhone 12 Pro.
+- Friends and family members were asked to review the site on their devices and to point out any bugs and/or user experience issues.  
+
+#### **Responsiveness**   
+Throughout development, the website's responsiveness on different devices was regularly tested using developer tools.
+
+**Result**: 
+
+#### **Links**   
+All website links and buttons were rigorously tested to ensure:
+- Correct and expected functioning of all navigation links.
+- Social media buttons open in a new tab and function correctly.
+
+**Result**: Confirmed all links and buttons are functioning correctly.
+
+#### **Form Validation and Functionality**  
+Website forms were tested for:
+- Automatic data pre-population in forms like Edit Review, Edit Product, Checkout, and User Profile Information (when data exists).
+- Proper functioning of required attributes.
+- Display of validation messages for incorrect format in username and password fields.
+- Correct operation of Submit, Cancel, and Back buttons.
+- Data saving into the database.
+- Display of a toast message for feedback after form submission.
+
+**Result**: All forms are functioning as intended.
+
+![Forms manual testing](readme-testing-files/testing/forms-test.png"Forms manual testing")  
+
+
+#### **Defensive (Security) Testing**  
+Defensive testing was conducted to ensure certain actions are restricted to authorized users/admins. This included tests such as:
