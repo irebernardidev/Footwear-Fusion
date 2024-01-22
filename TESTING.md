@@ -1,30 +1,30 @@
 # **Footwear Fusion - Testing**  
 
-[Back to the main README.md file]()  
+[Back to the main README.md file](FootwearFusion-README.md)
 
-[Back to the Testing section in main README.md file]()
+[Back to the Testing section in main README.md file](FootwearFusion-README.md#testing)
 
-[View the live website here]()  
+[View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
 
 ## **Table of Contents**  
-1. User Stories Testing  
-   - Unregistered Users' Goals  
-   - Registered Users' Goals  
-   - Administrative Account Holder's Goals  
-2. Autoprefixer CSS  
-3. Manual Testing  
-   - Browsers Compatibility  
-   - Devices  
-   - Responsiveness  
-   - Links  
-   - Forms  
-   - Defensive Testing  
-4. W3C Validator Testing  
-   - HTML  
-   - CSS  
-5. JSHint Testing  
-6. Pep8 Online Testing  
-7. Lighthouse Testing  
+1. [User Stories Testing](#1-user-stories-testing)  
+   - [Unregistered Users' Goals](#unregistered-users-goals)  
+   - [Registered Users' Goals](#registered-users-goals) 
+   - [Administrative Account Holder's Goals](#administrative-account-holder-s-goals) 
+2. [Autoprefixer CSS](#autoprefixer-css)
+3. [Manual Testing](#3-manual-testing)
+   - [Browsers Compatibility](#browsers-compatibility) 
+   - [Devices](#devices)
+   - [Responsiveness](#responsiveness)
+   - [Links](#links)
+   - [Forms](#forms)
+   - [Defensive Testing](#defensive-testing)
+4. [W3C Validator Testing](#4-w3c-validator-testing) 
+   - [HTML](#html)
+   - [CSS](#css)
+5. [JSHint Testing](#5-jshint-testing)
+6. [Pep8 Online Testing](#6-pep8-online-testing)  
+7. [Lighthouse Testing](#7-lighthouse-testing)  
 
 The website was extensively tested during the development by using:
 - console.log() and developer tools for front-end  
@@ -33,7 +33,7 @@ The website was extensively tested during the development by using:
 
 ### **1. User Stories Testing**  
 
-As a shopper I want to be able to:
+**A. As a shopper I want to be able to:**
 
 1. *Rapidly discern the type of products or services offered by the site.*
 
@@ -126,8 +126,9 @@ As previously mentioned, users will receive an email confirmation in their inbox
 
 Users have the option to access the Articles page through two pathways: either by clicking the articles link in the footer or by navigating from the homepage. Once on the Articles page, they can select and view an article by simply clicking on their desired choice.
 
-![All articles](readme-testing-files/testing/user-stories/articles.png"All articles")  
-   ![Individual article](readme-testing-files/testing/user-stories/individual-article.png "Individual article")  
+![All articles](readme-testing-files/testing/user-stories/articles.png "All articles")  
+
+![Individual article](readme-testing-files/testing/user-stories/individual-article.png "Individual article")  
 
 
 17. *Navigate the site with ease using the Navigation Bar and Footer.*
@@ -168,4 +169,8 @@ Users can also locate the link to access the contact page within the footer sect
 
 ![Contact form](readme-testing-files/testing/user-stories/contact-form.png "Contact form")   
 
+
+[Back to top &uarr;](#table-of-contents)  
 <br/>
+
+**B. As a registered user/ shopper, I want to be able to:**
