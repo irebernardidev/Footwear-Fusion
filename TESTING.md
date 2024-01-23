@@ -268,6 +268,8 @@ To edit a product, I log in as admin, go to either the 'Products' page or an 'In
 
 ![Edit and Delete product](readme-testing-files/testing/user-stories/admin-edit-delete.png "Edit and Delete product")   
 
+![Edit product](readme-testing-files/testing/user-stories/edit-product.png "Edit product")   
+
 3. *Remove products from the listing.*
 
 For product deletion, I log in as admin, navigate to the 'Products' page or the 'Individual Product' page, and click the 'Delete' link. A confirmation modal appears, and I can complete the deletion process by clicking the 'Yes, Delete' button.
