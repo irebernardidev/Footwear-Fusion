@@ -276,6 +276,7 @@ For product deletion, I log in as admin, navigate to the 'Products' page or the 
 
 ![Edit and Delete product](readme-testing-files/readme/delete-product-modal.png "Edit and Delete product")   
 
+[Back to top &uarr;](#user-stories)  
 
 ### **2. Auto Prefixer CSS**   
 [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add CSS vendor prefixes to the CSS rules after the developing process was done, to ensure that the they work across all browsers.  
@@ -302,6 +303,8 @@ All website links and buttons were rigorously tested to ensure:
 - Correct and expected functioning of all navigation links.
 - Social media buttons open in a new tab and function correctly.
 
+![View Links manual testing](readme-testing-files/testing/links-test.png "Links manual testing")
+
 **Result**: Confirmed all links and buttons are functioning correctly.
 
 #### **Form Validation and Functionality**  
@@ -315,8 +318,65 @@ Website forms were tested for:
 
 **Result**: All forms are functioning as intended.
 
-![Forms manual testing](readme-testing-files/testing/forms-test.png"Forms manual testing")  
+![View Forms manual testing](readme-testing-files/testing/forms-test.png "Forms manual testing")  
 
+[Back to top &uarr;](#2-auto-prefixer-css)  
+
+<br/>
+
+## **W3C Validator Testing** 
+I utilized the W3C Validator to thoroughly check the HTML and CSS code across all pages of Footwear Fusion project. Here are the results from this comprehensive validation process:
+
+#### **HTML Validation**
+All pages passed the HTML validation check without any issues, confirming the clean and compliant structure of our HTML code across the website.
+
+- [Homepage (index.html)](readme-testing-files/testing/html-validator/home.png)   
+- [Products Page (products.html)](readme-testing-files/testing/html-validator/products.png)   
+- [Individual Product Page (product_detail.html)](readme-testing-files/testing/html-validator/individual-product.png)      
+- [Add Product Page (add_product.html)](readme-testing-files/testing/html-validator/add-product.png)   
+- [Edit Product Page (edit_product.html)](readme-testing-files/testing/html-validator/edit-product.png)   
+- [Shopping Bag Page (bag.html)](readme-testing-files/testing/html-validator/shopping-bag.png)   
+- [Checkout Page (checkout.html)](readme-testing-files/testing/html-validator/checkout.png)   
+- [Checkout Success Page (checkout_success.html)](readme-testing-files/testing/html-validator/checkout-success.png)   
+- [Favorites Page (favorites.html)](readme-testing-files/testing/html-validator/favorites.png)   
+- [Profile Page (profile.html)](readme-testing-files/testing/html-validator/profile.png)   
+- [Add Review Page (add_review.html)](readme-testing-files/testing/html-validator/add-review.png)   
+- [Edit Review Page (edit_review.html)](readme-testing-files/testing/html-validator/edit-review.png)   
+- [Articles Page (articles.html)](readme-testing-files/testing/html-validator/articles.png)   
+- [Individual Article Page (article.html)](readme-testing-files/testing/html-validator/individual-article.png)   
+- [Contact Page (contact.html)](readme-testing-files/testing/html-validator/contact.png)   
+- [FAQ Page (faq.html)](readme-testing-files/testing/html-validator/faq.png)   
+
+#### **CSS Validation**
+The CSS validator confirmed that all our CSS files are error-free. There were some warnings related to the vendor prefixes appended by Autoprefixer CSS, but I chose to overlook these warnings since these prefixes are crucial for maintaining cross-browser compatibility of our styles.
+
+- ```base.css```   
+   ![base.css validation](readme-testing-files/testing/css-validator/base-css.png "base.css validation")  
+- ```checkout.css```   
+   ![checkout.css validation](readme-testing-files/testing/css-validator/checkout-css.png "checkout.css validation")  
+- ```contact.css```   
+   ![contact.css validation](readme-testing-files/testing/css-validator/contact-css.png "contact.css validation")   
+- ```profiles.css```   
+   ![profiles.css validation](readme-testing-files/testing/css-validator/profile-css.png "profiles.css validation")  
+- ```reviews.css```   
+   ![reviews.css validation](readme-testing-files/testing/css-validator/reviews-css.png "reviews.css validation")  
+
+[Back to top &uarr;](#w3c-validator-testing)  
+
+<br/>
+
+## JavaScript Testing   
+I used [JSHint](https://jshint.com/) to analyze the JavaScript code and addressed several warnings related to missing semicolons. Additionally, there was a warning about an undefined variable, ```Stripe```. Since ```Stripe``` is an external variable from the Stripe Payment API integrated into our website, it's not defined within our JS file.
+Attached below is a screenshot displaying the results of this testing.
+ 
+- [stripe_elements.js](readme-testing-files/testing/js-hint/stripe-elements-js.png)    
+- [products.js](readme-testing-files/testing/js-hint/products-js.png)    
+- [reviews.js](readme-testing-files/testing/js-hint/review-js.png)    
+- [profiles.js](readme-testing-files/testing/js-hint/profiles-js.png)    
+
+<br/>  
+
+## Flake8 and Pep8 Online Testing  
 
 #### **Defensive (Security) Testing**  
 Defensive testing was conducted to ensure certain actions are restricted to authorized users/admins. This included tests such as:
