@@ -329,6 +329,11 @@ I utilized the W3C Validator to thoroughly check the HTML and CSS code across al
 #### **HTML Validation**
 All pages passed the HTML validation check without any issues, confirming the clean and compliant structure of our HTML code across the website.
 
+Below are the captured errors and warnings:
+![HTML Validator testing](readme-testing-files/testing/html-validator.png "HTML Validator testing")  
+
+Resolved all warnings and errors; successfully validated all pages. Included are screenshots of the validation results for each page:
+
 - [Homepage (index.html)](readme-testing-files/testing/html-validator/home.png)   
 - [Products Page (products.html)](readme-testing-files/testing/html-validator/products.png)   
 - [Individual Product Page (product_detail.html)](readme-testing-files/testing/html-validator/individual-product.png)      
@@ -376,6 +381,58 @@ Attached below is a screenshot displaying the results of this testing.
 <br/>  
 
 ## Flake8 and Pep8 Online Testing  
+Utilized Flake8 Python linting in Gitpod, addressing nearly all issues. Remaining issues include:
+- In apps.py of checkout app : 
+   Issue: ```'checkout.signals' imported but unused```  
+   Justification: Despite the import being unused, it is necessary for the application's functionality. Therefore, this warning was disregarded.  
+- In webhooks.py on checkout app:
+   Issue: ```local variable 'e' is assigned to but never userd```   
+   Justification: The lint error arose due to a broadly caught exception. I opted to overlook this error.
+- In settings.py of the project's folder:
+   Issue: ```line too long (91 > 79 characters)```
 
-#### **Defensive (Security) Testing**  
-Defensive testing was conducted to ensure certain actions are restricted to authorized users/admins. This included tests such as:
+   Justification: Altering the line length could disrupt password validation functionality, so this error was ignored.
+
+
+   AUTH_PASSWORD_VALIDATORS = [
+      {
+         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+      },
+      {
+         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+      },
+      {
+         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+      },
+      {
+         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+      },
+   ] 
+  
+  
+   
+All other warnings, errors, and problems on Gitpod's flake 8 are resolved.   
+To add more validation to the code, I also used [Pep8 Online](http://pep8online.com/checkresult), and all codes passed the PEP8 requirements.  
+<br/>
+## **Lighthouse Testing**   
+Page | Performance | Accessibility | Best Practices | SEO  
+---|---|---|---|---
+Home Page | 95 | 87 | 92 | 100   
+Products Page | 86| 91 | 100 | 100   
+Individual Product Page | 98 | 84 | 100 | 100   
+Shopping Bag Page | 97 | 90 | 100 | 90   
+Checkout Page | 91 | 89 | 100 | 100   
+Checkout Success Page | 98 | 91 | 100 | 100   
+Profiles Page | 86 | 91 | 100 | 100   
+Add Review Page | 98 | 89 | 100 | 100   
+Edit Review Page | 98 | 89 | 100 | 100   
+Favorites Page | 95 | 91 | 100 | 100 
+Articles Page | 95 | 89 | 100 | 100    
+Individual Article Page | 98 | 91 | 100 | 100     
+Contact Page | 99 | 88 | 100 | 100   
+FAQ Page | 99 | 88 | 100 | 100    
+Add Product Page | 99 | 81 | 100 | 100    
+Edit Product Page | 99 | 82 | 100 | 100  
+Improvements taken based on suggestions from Lighthouse:   
+- Add aria-label to button that's using only icon without text.  
+- Add label to form element that didn't have labels yet.  
