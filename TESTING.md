@@ -115,7 +115,6 @@ Customers have the convenience of effortlessly modifying the product quantity by
 ![Adjust Bag](readme-testing-files/testing/user-stories/bag-adjust.png "Adjust Bag") 
 
 12. *Seamlessly proceed to checkout and input payment details.*
-
 13. *Be assured of the security of personal and payment information.*
 
 Upon selecting the 'Secure Checkout' button located on the Shopping Bag page, users will be seamlessly redirected to the Checkout page. Within the payment section, the card payment details are conveniently organized into separate fields for card number, expiration date, CVC, and zip code entry.
