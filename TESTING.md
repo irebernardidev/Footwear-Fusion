@@ -381,7 +381,7 @@ Attached below is a screenshot displaying the results of this testing.
 <br/>  
 
 ## Flake8 and Pep8 Online Testing  
-Utilized Flake8 Python linting in Gitpod, addressing nearly all issues. Remaining issues include:
+Utilized Flake8 Python linting in VScode, addressing nearly all issues. Remaining issues include:
 - In apps.py of checkout app : 
    Issue: ```'checkout.signals' imported but unused```  
    Justification: Despite the import being unused, it is necessary for the application's functionality. Therefore, this warning was disregarded.  
@@ -411,7 +411,7 @@ Utilized Flake8 Python linting in Gitpod, addressing nearly all issues. Remainin
   
   
    
-All other warnings, errors, and problems on Gitpod's flake 8 are resolved.   
+All other warnings, errors, and problems on VSCode's flake 8 are resolved.   
 To add more validation to the code, I also used [Pep8 Online](http://pep8online.com/checkresult), and all codes passed the PEP8 requirements.  
 <br/>
 ## **Lighthouse Testing**   
