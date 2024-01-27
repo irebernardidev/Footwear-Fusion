@@ -6,7 +6,7 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user',)
-        
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -21,7 +21,7 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
         }
-        
+
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'default_country':

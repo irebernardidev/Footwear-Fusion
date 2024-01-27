@@ -1,10 +1,15 @@
 # **Footwear Fusion - Testing**  
 
-[Back to the main README.md file](../Footwear-Fusion-README.md)
-
-[Back to the Testing section in main README.md file](Footwear-Fusion-README.md#testing)
+[Back to the main README.md file](README.md "Link to README file")
 
 [View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
+
+[View the Repository](https://github.com/irebernardidev/Footwear-Fusion "Link to Repository")
+
+***
+![VeggieNosh](readme-testing-files/readme/main-image.png)
+***
+
 
 ## **Table of Contents**  
 1. [User Stories Testing](#1-user-stories-testing)  
