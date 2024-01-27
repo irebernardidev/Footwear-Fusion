@@ -291,6 +291,27 @@ For product deletion, I log in as admin, navigate to the 'Products' page or the 
 #### **Browsers Compatibility**   
 The website underwent testing across various browsers, including Google Chrome, Microsoft Edge, Opera, Mozilla Firefox, and Safari (iOS).
 
+**Chrome:**
+
+![Chrome test image](readme-testing-files/testing/chrome.png)
+
+**Safari:**
+
+![Safari test image](readme-testing-files/testing/safari.png)
+
+**Edge:**
+
+![Edge test image](readme-testing-files/testing/edge.png)
+
+**Opera:**
+
+![Opera test image](readme-testing-files/testing/opera.png)
+
+**Firefox:**
+
+![Firefox test image](readme-testing-files/testing/firefox.png)
+
+
 #### **Devices**  
 The site was viewed and assessed on multiple devices, such as:
 - Macbook Air 2017 13 inch screen.
@@ -299,6 +320,9 @@ The site was viewed and assessed on multiple devices, such as:
 
 #### **Responsiveness**   
 Throughout development, the website's responsiveness on different devices was regularly tested using developer tools.
+Below is a demonstration of the website's responsiveness across all pages, showcasing how each page adapts seamlessly to different screen sizes. 
+
+![View Responsiveness manual testing](readme-testing-files/testing/responsiveness.gif "Responsiveness test")
 
 **Result**: 
 
@@ -397,7 +421,7 @@ Utilized Flake8 Python linting in VScode, addressing nearly all issues. Remainin
    Issue: ```line too long (91 > 79 characters)```
 
    Justification: Altering the line length could disrupt password validation functionality, so this error was ignored.
-
+``````
 
    AUTH_PASSWORD_VALIDATORS = [
       {
@@ -414,21 +438,26 @@ Utilized Flake8 Python linting in VScode, addressing nearly all issues. Remainin
       },
    ] 
   
-  
+  ``````
    
 All other warnings, errors, and problems on VSCode's flake 8 are resolved.   
 To add more validation to the code, I also used [Pep8 Online](http://pep8online.com/checkresult), and all codes passed the PEP8 requirements.  
 <br/>
+
 ## **Lighthouse Testing**   
+I utilized Chrome Developer Tools' [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?pli=1) feature for a comprehensive evaluation of our website, focusing on accessibility, best practices, and SEO. Impressively, all pages achieved or nearly reached a perfect score in these categories. However, the performance aspect requires attention, as some pages showed lower scores. This is primarily attributed to the loading times associated with Amazon AWS. Addressing this will be a key objective in my next phase of development to boost the site's overall performance.
+
+Here's a table outlining the scores:
+
 Page | Performance | Accessibility | Best Practices | SEO  
 ---|---|---|---|---
-Home Page | 95 | 87 | 92 | 100   
-Products Page | 86| 91 | 100 | 100   
-Individual Product Page | 98 | 84 | 100 | 100   
-Shopping Bag Page | 97 | 90 | 100 | 90   
-Checkout Page | 91 | 89 | 100 | 100   
+Home Page | 70 | 82 | 95 | 100   
+Products Page | 72 | 91 | 95 | 100   
+Individual Product Page | 98 | 88 | 100 | 100   
+Shopping Bag Page | 97 | 90 | 100 | 100   
+Checkout Page | 84 | 89 | 100 | 100   
 Checkout Success Page | 98 | 91 | 100 | 100   
-Profiles Page | 86 | 91 | 100 | 100   
+Profiles Page | 76 | 91 | 100 | 100   
 Add Review Page | 98 | 89 | 100 | 100   
 Edit Review Page | 98 | 89 | 100 | 100   
 Favorites Page | 95 | 91 | 100 | 100 
@@ -438,6 +467,5 @@ Contact Page | 99 | 88 | 100 | 100
 FAQ Page | 99 | 88 | 100 | 100    
 Add Product Page | 99 | 81 | 100 | 100    
 Edit Product Page | 99 | 82 | 100 | 100  
-Improvements taken based on suggestions from Lighthouse:   
-- Add aria-label to button that's using only icon without text.  
-- Add label to form element that didn't have labels yet.  
+
+[Back to top &uarr;](#table-of-contents)  
