@@ -1,7 +1,7 @@
 # **Footwear Fusion**
 ![Footwear Fusion website in variouse devices](readme-testing-files/readme/main-image.png "Footwear Fusion website in variouse devices")
 
-[View the live website here]()
+[View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
 </br>  
 
 **Table of Contents**   
@@ -29,7 +29,7 @@ This innovative website marks the culmination of the Code Institute's Milestone 
    B. [Page Features](#b-page-features)  
    C. [Features to be Implemented in The Future](#features-to-be-implemented-in-the-future)
 4. [Testing](#testing)    
-   - [Go to TESTING.md]()
+   - [Go to TESTING.md](TESTING.md)
 5. [Issues and Bugs](#issues-and-bugs)  
    - [Solved Issues](#resolved-issues)  
    - [Known Issues & Unsolved Bugs]()
@@ -439,7 +439,7 @@ To enhance user experience, it is proposed to initially load a limited number of
 
 ## **Testing**
 I have performed thorough testing of the website to ensure its functionality and compatibility with various browsers and devices. Additionally, I have conducted user research and conducted usability tests to identify areas for improvement and optimize the user experience.
-The complete documentation of these tests is available for review [here]().
+The complete documentation of these tests is available for review [here](TESTING.md).
 
 
 ## **Issues and Bugs**   
@@ -496,7 +496,7 @@ Heroku Postgres
    Employed for storing all static and media files in the production environment.
 ### **Tools and Programs**  
    * [Git](https://git-scm.com)  
-   Leveraged for version control through the Gitpod terminal, enabling commits to Git and pushes to GitHub.  
+   Leveraged for version control through the VS Code terminal, enabling commits to Git and pushes to GitHub.  
    * [GitHub](https://github.com)  
    Served as the code repository following pushes from Git.
    * [Heroku](https://www.heroku.com)   
@@ -519,13 +519,13 @@ Heroku Postgres
 <br/>  
 
 ## **Deployment**  
-The project was developed using Gitpod as the IDE, committed to Git as a local repository, and pushed/ stored to GitHub. The web application is deployed on Heroku because we can't host a Python project on Github pages, with static and media files stored in AWS S3. The repository itself is hosted on Github.  
+The project was developed using Visual Studio Code as the IDE, committed to Git as a local repository, and pushed/stored to GitHub. The web application is deployed on Heroku because we can't host a Python project on Github pages, with static and media files stored in AWS S3. The repository itself is hosted on Github. 
 
 ### **A. How To Use This Project**
 To use and further develop this project you can either fork or clone the repository.  
 
 #### **Fork GitHub Repository**  
-By forking the GitHub repository you can make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository, by using the following steps:  
+By forking the GitHub repository you can make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository, by using the following steps:   
 
 1. Log in to GitHub.  
 2. Navigate to the main page of the GitHub Repository that you want to fork.  
@@ -676,11 +676,11 @@ Note: you don't have to do this if you've installed all dependencies in the requ
    ```
    heroku config:set DISABLE_COLLECTSTATIC=1 --app footwear-fusion
    ```
-   And add the hostname of the Heroku app to allowed hosts in the project's settings.py, and also add localhost so that Gitpod will still work as well:  
+   And add the hostname of the Heroku app to allowed hosts in the project's settings.py, and also add localhost so that VS Code will still work as well: 
    ```
    ALLOWED_HOSTS = ['footwear-fusion.herokuapp.com', 'localhost']
    ```   
-13. Add, commit, and push to gitpod and then to Heroku. After pushing to gitpod as usual, initialize git remote first:
+13. Add, commit, and push to GitHub and then to Heroku. After pushing to GitHub as usual, initialize git remote first:
    ```
    heroku git:remote -a footwear-fusion
    ``` 
@@ -856,6 +856,8 @@ Product images across the website were obtained from various free image sources,
 
 Additionally, the website's logo was initially designed using a template from [FlamingText](https://www4.flamingtext.com/). It was then customized to incorporate the website's color scheme and modified to enhance contrast for a more distinct and cohesive visual identity.
 
+- Hero Image on Home Page: Photo by Dominika Roseclay from Pexels ([1239400](https://www.pexels.com/photo/1239400/))
+
 ### **C. Content**
 **Articles / Blog Posts**
 
@@ -868,4 +870,12 @@ Additionally, the website's logo was initially designed using a template from [F
 - "The Ultimate Guide to Spring Style for Men" - An extensive guide to men's fashion trends for the spring. [Source](https://theessentialman.com/ultimate-guide-spring-style-men/).
 
 ## **ACKNOLEDGMENTS**  
+I would like to thank the following people for their support and assistance with this project:
 
+- My mentor Seun Owonikoko for her invaluable advice and guidance throughout the development process.
+
+- Rebecca from tutor support for helping me troubleshoot a major bug towards the end of the development phase. Her assistance was hugely appreciated. 
+
+- My friends and family members who took time to test the website on various devices and provide feedback. Their input was extremely helpful for identifying issues.
+
+In addition, I'd like to acknowledge the Code Institute course material which equipped me with the key skills to build this project.
