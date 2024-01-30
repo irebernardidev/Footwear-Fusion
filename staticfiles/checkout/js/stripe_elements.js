@@ -1,9 +1,11 @@
 /*
-    Core logic/payment flow for this comes from here:
+    The primary logic and payment flow implemented in this section are based on 
+    the Stripe documentation for accepting a payment, available at:
     https://stripe.com/docs/payments/accept-a-payment
-    CSS from here: 
-    https://stripe.com/docs/stripe-js
+    The styling (CSS) is adapted from Stripe's JavaScript library documentation, 
+    accessible here: https://stripe.com/docs/stripe-js
 */
+
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
