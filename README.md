@@ -1,7 +1,7 @@
 # **Footwear Fusion**
 ![Footwear Fusion website in variouse devices](readme-testing-files/readme/main-image.png "Footwear Fusion website in variouse devices")
 
-[View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
+[View the live website here: Footwear Fusion](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
 </br>  
 
 **Table of Contents**   
@@ -291,7 +291,7 @@ Custom error pages for 403 (Forbidden), 404 (Not Found), and 500 (Internal Serve
 
 ### **B. Page Features**  
 #### **1. Home Page** 
-[View the Homepage layout here](readme-testing-files/readme/home-page.png)   
+👉 [View the Homepage layout here](readme-testing-files/readme/home-page.png)   
 - The Home page engages visitors immediately with a dynamic array of images, serving as a visual lure to explore further and encouraging purchases.
 - A full-screen hero image sets a striking tone, featuring a prominent jumbotron heading that delivers a memorable first impression. This element highlights the latest seasonal offerings, along with a call-to-action (CTA) button that guides users straight to the new arrivals. 
 - A dedicated section for the Sneakers Collection offers swift access to these products.
@@ -302,7 +302,7 @@ Custom error pages for 403 (Forbidden), 404 (Not Found), and 500 (Internal Serve
 - The 'Articles and Blogs' area introduces the three most recent pieces from the store's admin or selected superusers, with an additional option to 'See More Articles', leading to a comprehensive view of all available content.
 
 #### **2. Products Page Overview**  
-[View the Products Page layout here](readme-testing-files/readme/products.png)   
+👉 [View the Products Page layout here](readme-testing-files/readme/products.png)   
 - At the top of the Products page, users are greeted with breadcrumb navigation, which aids in tracking their journey through the site - for instance, selecting Women Sneakers displays: Home > Women > Sneakers.
 - Prominently placed beneath the breadcrumb is a 'Final Sale' banner, catering to users' propensity to browse sale items initially. The 'shop now' button on this banner filters the view to showcase only items on sale.
 - An exclusive desktop feature, the Side Navigation, allows for swift perusal of categories and subcategories, filtering the display to the user's specific interests. On mobile devices, this functionality is available via the hamburger menu.
@@ -312,7 +312,7 @@ Custom error pages for 403 (Forbidden), 404 (Not Found), and 500 (Internal Serve
 - For added convenience, a 'back to top' button is fixed on the right side of the screen, providing quick and easy navigation back to the top of the page.
 
 #### **3. Individual Product Page**  
-[View the Individual Product Page layout here](readme-testing-files/readme/individual-product-page.png)  
+👉 [View the Individual Product Page layout here](readme-testing-files/readme/individual-product-page.png)  
 - At the outset, users are greeted by a breadcrumb trail, aiding in the understanding of the page’s position within the site's structure. 
 - The page prominently displays the product's imagery, name, cost, ratings, category, and user reviews at the lower section. 
 - A heart icon, placed near the top right of the product image, signals a feature for registered users to add the item to their favorites; this icon highlights in red upon interaction and remains red once the product is in the user's favorites.
@@ -324,20 +324,20 @@ Custom error pages for 403 (Forbidden), 404 (Not Found), and 500 (Internal Serve
 The following example illustrates this feature when I'm logged in as the user "ire_b":
 
 ![Edit and Delete Review buttons](readme-testing-files/readme/review-edit-delete-button.png "Edit and Delete Review buttons")   
-Upon selecting the Edit button, users are redirected to the Edit Review page [View Edit Review Page](https://github.com/dissyulina/footwear#11-add-edit-review-page).  
+Upon selecting the Edit button, users are redirected to the Edit Review page 👉 [View Edit Review Page](https://github.com/dissyulina/footwear#11-add-edit-review-page).  
 Alternatively, clicking the Delete button triggers a confirmation dialog to verify whether the user intends to delete their review. 
 
 ![Confirmation modal before deleting review](readme-testing-files/readme/delete-review-modal.png "Confirmation modal before deleting review")  
 
 
 #### **4. Favorites Page**  
-[View the Favorites Page layout here](readme-testing-files/readme/favorites-page.png)  
+👉 [View the Favorites Page layout here](readme-testing-files/readme/favorites-page.png)  
 - The Favorites interface showcases a user's selected products, echoing the layout of the main product page with the item's image, name, price, and rating. These items are arranged into a responsive grid that adjusts across devices: four columns on large screens, three on medium, and two on small screens.
 - Product interaction is refined on this page, with the heart icon replaced by a trash icon on the upper right of each product image, indicating the ability to remove items from favorites.
 - Acknowledging the Favorites as a curated collection of items users are considering for purchase, there is a direct option to select sizes and an 'Add to Bag' button beneath each item, streamlining the process of transferring favorites directly to the shopping bag without visiting the product's individual page.
 
 #### **5. Shopping Bag Page**  
-[View the Bag page here](readme-testing-files/readme/bag-page.png)  
+👉 [View the Bag page here](readme-testing-files/readme/bag-page.png)  
 - The Shopping Bag interface displays all items a user has added to their cart, along with the total cost, allowing for adjustments in quantity or removal of items directly on this page.
 - Detailed product information is presented, including the image, name, SKU, price, selected size, and chosen quantity.
 - An intuitive trash icon adjacent to each item offers a clear call to action to remove products from the bag.
@@ -346,32 +346,35 @@ Alternatively, clicking the Delete button triggers a confirmation dialog to veri
 - For users wishing to continue shopping, a 'Keep Shopping' button is conveniently placed below the grand total box as an alternative action.
 
 #### **6. Checkout Page**  
-[View the Checkout Page here](readme-testing-files/readme/checkout-page.png)  
+👉 [View the Checkout Page here](readme-testing-files/readme/checkout-page.png)  
 The Checkout page is designed for efficiency and ease, consisting of a form for processing transactions and displaying order details. The form is intuitively organized into three distinct sections for simplicity: 'Details' for the user's name and email, 'Delivery' for the address, and 'Payment' for card information. A summary of products selected on the Bag page, along with the total amount due, is also prominently featured. To facilitate a smooth transaction, call-to-action (CTA) buttons are strategically placed to prompt payment and finalize the purchase or to provide an option to modify the bag contents.
 
 #### **7. Checkout Success Page**   
-[View the Checkout Sucess Page here](readme-testing-files/readme/checkout-success-page.png)  
-Upon successful transaction processing, the Checkout Success page presents a detailed summary of the completed order. Here, users can review their order specifics, including the list of items purchased, the delivery address, and the billing details. For registered users, this summary is also accessible through their Profile page, enabling them to track and reference their orders conveniently.
+👉 [View the Checkout Sucess Page here](readme-testing-files/readme/checkout-success-page.png)
+
+👉 [View the Email confirmation here](readme-testing-files/testing/user-stories/email.png)
+
+Upon successful transaction processing, the Checkout Success page presents a detailed summary of the completed order. Here, users can review their order specifics, including the list of items purchased, the delivery address, and the billing details. Additionally, as part of this process, users will receive an email confirmation at their registered email address confirming their order. This is facilitated through a webhook feature, ensuring real-time notification and order confirmation. For registered users, the order summary is also accessible through their Profile page, enabling them to conveniently track and reference their past orders.
 
 #### **8. Profile Page - My Information**  
-[View the Profile Page - My Information here](readme-testing-files/readme/profile-information-page.png)  
+👉 [View the Profile Page - My Information here](readme-testing-files/readme/profile-information-page.png)  
 - The Profile page is intuitively organized into three tabs: My Information, My Purchases, and Ratings/Reviews.
 - The My Information tab allows users to update and save their delivery details. These saved details are conveniently used to auto-fill the delivery section of the Checkout form in future purchases, requiring users only to input their payment information.
 - Changes to the delivery details are easily made by modifying the input fields and clicking the 'Update Information' button, which then synchronizes the information with the user's profile in the database.
 
 #### **9. Profile Page - My Purchases**  
-[View the Profile Page - My Purchases here](readme-testing-files/readme/profile-orderhistory-page.png)  
+👉 [View the Profile Page - My Purchases here](readme-testing-files/readme/profile-orderhistory-page.png)  
 - The My Purchases tab presents a chronological list of the user's order history, with the most recent purchases displayed first.
 - Users can interact with each order number, which links to the Checkout Success page, providing detailed information about that specific order.
 
 #### **10. Profile Page - Ratings/Reviews**  
-[View the Profile Page - Ratings/Reviews here](readme-testing-files/readme/profile-reviews-page.png)  
+👉 [View the Profile Page - Ratings/Reviews here](readme-testing-files/readme/profile-reviews-page.png)  
 - The Ratings/Reviews tab is a dedicated space for users to engage with products they have purchased.
 - It lists all items eligible for review, ensuring that reviews are based on actual user experience. To leave a review, users can select the 'Give Review' button adjacent to the product, which redirects them to the Add Review page.
 - Once a review is submitted, the item will no longer appear in the list, maintaining an up-to-date overview of products pending review.
 
 #### **11. Add/ Edit Review Page**  
-[View the Add/ Edit Review Page here](readme-testing-files/readme/add-edit-review-page.png)  
+👉 [View the Add/ Edit Review Page here](readme-testing-files/readme/add-edit-review-page.png)  
 - The Review Submission page presents users with a straightforward form for rating and reviewing a specific product. Users are required to assign a rating on a scale of 1 to 5, and they have the option to include a written review. Submission of the form necessitates at least a rating, as it cannot be processed with this field left blank.
 - Below the form, users will find a 'Submit Review' button to finalize their input. Additionally, a 'Cancel' button is conveniently placed, allowing users to return to the review section of their profile if they decide not to proceed.
 - Upon successful submission, the user is redirected back to the review section of their profile. This action is deliberately designed to encourage an ongoing engagement with reviewing additional products.
@@ -379,38 +382,38 @@ Upon successful transaction processing, the Checkout Success page presents a det
 - As previously outlined in the section discussing the Individual Product page, users have the ability to edit their reviews. This is achieved by visiting the Individual Product page, locating their existing review, and selecting the 'Edit' option to make amendments.
 
 #### **12. Articles Page**  
-[View the Articles Page here](readme-testing-files/readme/articles-page.png)
+👉 [View the Articles Page here](readme-testing-files/readme/articles-page.png)
 - The Articles page is a curated space where visitors can find a wealth of information on footwear and accessories. It aims to enrich the customer journey beyond mere transactions by offering engaging content that could foster greater interaction with the brand.
 - Each article is presented in a clean, card-style layout that includes a visual snippet, an enticing headline, a brief excerpt of the content, and a 'Read more' link that directs users to the full Individual Article page. 
 
 #### **13. Individual Article Page**  
-[View the Individual Article Page here](readme-testing-files/readme/individual-article-page.png)
+👉 [View the Individual Article Page here](readme-testing-files/readme/individual-article-page.png)
 - The Individual Article page is dedicated to showcasing the full content of an article, featuring the main image, headline, and the publication date for context.
 - To encourage continued exploration, a 'Read more articles' button is strategically positioned at the bottom-center of the page, inviting users to navigate back to the main collection of articles.
 
 #### **14. FAQ Page**  
-Discover the answers to common inquiries on the [FAQ Page here](readme-testing-files/readme/faq-page.png)  
+Discover the answers to common inquiries on the 👉 [FAQ Page here](readme-testing-files/readme/faq-page.png)  
 This section addresses typical questions related to payment, orders, returns, and more. Users can easily navigate to the FAQ page via the link located in the website's footer. Should there be questions not covered, users are encouraged to reach out for further assistance by utilizing the 'Go to Contact Page' button, conveniently positioned at the bottom-center of the FAQ page.
 
 #### **15. Contact Page**  
-[View the Contact Page here](readme-testing-files/readme/contact-page.png)  
+👉 [View the Contact Page here](readme-testing-files/readme/contact-page.png)  
 - The Contact Page is designed to facilitate customer interaction with the store. It lists the store's contact details, including a phone number and email address, along with a contact form for direct inquiries.
 - Upon submission, the contact form is programmed to store user messages in the database, enabling store administrators to review and address all incoming communications effectively.
 
 #### **16. Register and Log In Page**  
-[View the Register Page here](readme-testing-files/readme/register-page.png)  
-[View the Login Page here](readme-testing-files/readme/login-page.png)  
+👉 [View the Register Page here](readme-testing-files/readme/register-page.png)  
+👉 [View the Login Page here](readme-testing-files/readme/login-page.png)  
 - The Registration page offers a straightforward process for user sign-up. Essential details required for registration include an email address, username, and password. A confirmation email is sent post-registration, containing a link for account activation, a prerequisite for login privileges on the site.  
 - The Login page provides a seamless re-entry point for existing users. They can regain access to the site using their email or username in combination with their password.
 
 #### **17. Product Management / Add Product page (Admin / Superuser only)**  
-[View the Product Management Page here](readme-testing-files/readme/add-product-page.png)  
+👉 [View the Product Management Page here](readme-testing-files/readme/add-product-page.png)  
 - Exclusive to Admins or Superusers, the Product Management interface is accessible via the 'My Account' section in the Navbar post-login.
 - The interface includes a comprehensive form enabling the addition of new products, with fields for category, subcategory, SKU, product name, size availability, price, rating, and product image.
 - An 'Add Product' button at the bottom-center of the page submits the new entry, while a 'Cancel' button provides an easy navigation route back to the products overview page.
 
 #### **18. Edit Product page (Admin / Superuser only)**  
-[View the Edit Product Page here](readme-testing-files/readme/edit-product-page.png)  
+👉 [View the Edit Product Page here](readme-testing-files/readme/edit-product-page.png)  
 - The Edit Product interface is similarly exclusive to Admins or Superusers and is accessed via an 'Edit' link next to each product listing on the Products page, or on Individual Product page.
 - Mirroring the Add Product page in design, this consistency ensures a user-friendly experience with a negligible learning curve for administrators.
 - Product updates are confirmed with an 'Update Product' button, and a 'Cancel' button is also provided to revert back to the main product listing without making changes.
@@ -439,7 +442,7 @@ To enhance user experience, it is proposed to initially load a limited number of
 
 ## **Testing**
 I have performed thorough testing of the website to ensure its functionality and compatibility with various browsers and devices. Additionally, I have conducted user research and conducted usability tests to identify areas for improvement and optimize the user experience.
-The complete documentation of these tests is available for review [here](TESTING.md).
+The complete documentation of these tests is available for review 👉 [here](TESTING.md).
 
 
 ## **Issues and Bugs**   
@@ -827,7 +830,7 @@ Create a custom_storages.py file in your project's root directory, and inside it
    class MediaStorage(S3Boto3Storage):
       location = settings.MEDIAFILES_LOCATION
    ```  
-   5. Finally, push these changes on Github.
+5. Finally, push these changes on Github.
 
    ```
    git add .
