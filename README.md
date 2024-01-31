@@ -1,15 +1,15 @@
 # **Footwear Fusion**
 ![Footwear Fusion website in variouse devices](readme-testing-files/readme/main-image.png "Footwear Fusion website in variouse devices")
 
-[View the live website here: Footwear Fusion](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
+🔗 View the live website here: [Footwear Fusion](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
 </br>  
 
 **Table of Contents**   
 
 ## **Introduction**
-Introducing Footwear Fusion, your go-to e-commerce destination for trendy shoes and stylish accessories! Our platform offers a wide selection of footwear, complemented by an array of fashion-forward accessories like bags and wallets. Designed with user security in mind, Footwear Fusion incorporates robust authentication and Stripe payment integration, ensuring a secure and seamless shopping experience.
+Introducing Footwear Fusion, your go-to e-commerce destination for trendy shoes and stylish accessories! The platform offers a wide selection of footwear, complemented by an array of fashion-forward accessories like bags and wallets. Designed with user security in mind, Footwear Fusion incorporates robust authentication and Stripe payment integration, ensuring a secure and seamless shopping experience.
 
-This innovative website marks the culmination of the Code Institute's Milestone Project 4, a pivotal component of their Diploma in Full Stack Software Development program. Footwear Fusion is a testament to the power of full-stack development, skillfully blending HTML, CSS, JavaScript, Django+Python, and relational databases. The project also leverages Stripe for secure transactions and utilizes various additional libraries to enhance functionality and user experience.
+This site, which I developed for the Code Institute's Milestone Project 4, combines style and security. It showcases my skills in full-stack development, blending HTML, CSS, JavaScript, and Django+Python, and includes Stripe for secure payments. Experience a seamless and secure shopping journey with Footwear Fusion!
 
 <br/>  
 
@@ -263,7 +263,11 @@ Each model is crafted to not only store essential data but also to create a seam
 
 - **Navigation Bar Across All Pages:**
 
-   ![The Navbar on desktop](readme-testing-files/readme/navbar-desktop.png "The Navbar on desktop")   
+   ![The Navbar on desktop](readme-testing-files/readme/navbar-desktop.png "The Navbar on desktop") 
+
+   - A distinct favicon, representing the essence of the website, appears at the top of the browser tab, enhancing brand recognition and reinforcing the website's nature.
+
+   ![The Favicon](readme-testing-files/readme/favicon.jpg "The Navbar on desktop") 
 
    - The Navbar is designed for flexibility, transforming into a hamburger menu on smaller screens for ease of use, and remains fixed at the top of the screen (sticky) for convenient navigation regardless of the user's position on the page.
    - Symmetrically centered at the top, the logo acts as a beacon, always ready to guide users back to the homepage.

@@ -1,13 +1,13 @@
 # **Footwear Fusion - Testing**  
 
-[Back to the main README.md file](README.md "Link to README file")
+🔗 [Back to the main README.md file](README.md "Link to README file")
 
-[View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
+🔗 [View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
 
-[View the Repository](https://github.com/irebernardidev/Footwear-Fusion "Link to Repository")
+🔗 [View the Repository](https://github.com/irebernardidev/Footwear-Fusion "Link to Repository")
 
 ***
-![VeggieNosh](readme-testing-files/readme/main-image.png)
+![Footwear Fusion](readme-testing-files/readme/main-image.png)
 ***
 
 
@@ -363,22 +363,22 @@ Below are the captured errors and warnings:
 
 Resolved all warnings and errors; successfully validated all pages. Included are screenshots of the validation results for each page:
 
-- [Homepage (index.html)](readme-testing-files/testing/html-validator/home.png)   
-- [Products Page (products.html)](readme-testing-files/testing/html-validator/products.png)   
-- [Individual Product Page (product_detail.html)](readme-testing-files/testing/html-validator/individual-product.png)      
-- [Add Product Page (add_product.html)](readme-testing-files/testing/html-validator/add-product.png)   
-- [Edit Product Page (edit_product.html)](readme-testing-files/testing/html-validator/edit-product.png)   
-- [Shopping Bag Page (bag.html)](readme-testing-files/testing/html-validator/shopping-bag.png)   
-- [Checkout Page (checkout.html)](readme-testing-files/testing/html-validator/checkout.png)   
-- [Checkout Success Page (checkout_success.html)](readme-testing-files/testing/html-validator/checkout-success.png)   
-- [Favorites Page (favorites.html)](readme-testing-files/testing/html-validator/favorites.png)   
-- [Profile Page (profile.html)](readme-testing-files/testing/html-validator/profile.png)   
-- [Add Review Page (add_review.html)](readme-testing-files/testing/html-validator/add-review.png)   
-- [Edit Review Page (edit_review.html)](readme-testing-files/testing/html-validator/edit-review.png)   
-- [Articles Page (articles.html)](readme-testing-files/testing/html-validator/articles.png)   
-- [Individual Article Page (article.html)](readme-testing-files/testing/html-validator/individual-article.png)   
-- [Contact Page (contact.html)](readme-testing-files/testing/html-validator/contact.png)   
-- [FAQ Page (faq.html)](readme-testing-files/testing/html-validator/faq.png)   
+- 👉 [Homepage (index.html)](readme-testing-files/testing/html-validator/home.png)   
+- 👉 [Products Page (products.html)](readme-testing-files/testing/html-validator/products.png)   
+- 👉 [Individual Product Page (product_detail.html)](readme-testing-files/testing/html-validator/individual-product.png)      
+- 👉 [Add Product Page (add_product.html)](readme-testing-files/testing/html-validator/add-product.png)   
+- 👉 [Edit Product Page (edit_product.html)](readme-testing-files/testing/html-validator/edit-product.png)   
+- 👉 [Shopping Bag Page (bag.html)](readme-testing-files/testing/html-validator/shopping-bag.png)   
+- 👉 [Checkout Page (checkout.html)](readme-testing-files/testing/html-validator/checkout.png)   
+- 👉 [Checkout Success Page (checkout_success.html)](readme-testing-files/testing/html-validator/checkout-success.png)   
+- 👉 [Favorites Page (favorites.html)](readme-testing-files/testing/html-validator/favorites.png)   
+- 👉 [Profile Page (profile.html)](readme-testing-files/testing/html-validator/profile.png)   
+- 👉 [Add Review Page (add_review.html)](readme-testing-files/testing/html-validator/add-review.png)   
+- 👉 [Edit Review Page (edit_review.html)](readme-testing-files/testing/html-validator/edit-review.png)   
+- 👉 [Articles Page (articles.html)](readme-testing-files/testing/html-validator/articles.png)   
+- 👉 [Individual Article Page (article.html)](readme-testing-files/testing/html-validator/individual-article.png)   
+- 👉 [Contact Page (contact.html)](readme-testing-files/testing/html-validator/contact.png)   
+- 👉 [FAQ Page (faq.html)](readme-testing-files/testing/html-validator/faq.png)   
 
 #### **CSS Validation**
 The CSS validator confirmed that all our CSS files are error-free. There were some warnings related to the vendor prefixes appended by Autoprefixer CSS, but I chose to overlook these warnings since these prefixes are crucial for maintaining cross-browser compatibility of our styles.
@@ -402,46 +402,41 @@ The CSS validator confirmed that all our CSS files are error-free. There were so
 I used [JSHint](https://jshint.com/) to analyze the JavaScript code and addressed several warnings related to missing semicolons. Additionally, there was a warning about an undefined variable, ```Stripe```. Since ```Stripe``` is an external variable from the Stripe Payment API integrated into our website, it's not defined within our JS file.
 Attached below is a screenshot displaying the results of this testing.
  
-- [stripe_elements.js](readme-testing-files/testing/js-hint/stripe-elements-js.png)    
-- [products.js](readme-testing-files/testing/js-hint/products-js.png)    
-- [reviews.js](readme-testing-files/testing/js-hint/review-js.png)    
-- [profiles.js](readme-testing-files/testing/js-hint/profiles-js.png)    
+- 👉 [stripe_elements.js](readme-testing-files/testing/js-hint/stripe-elements-js.png)    
+- 👉 [products.js](readme-testing-files/testing/js-hint/products-js.png)    
+- 👉 [reviews.js](readme-testing-files/testing/js-hint/review-js.png)    
+- 👉 [profiles.js](readme-testing-files/testing/js-hint/profiles-js.png)    
 
 <br/>  
 
-## Flake8 and Pep8 Online Testing  
-Utilized Flake8 Python linting in VScode, addressing nearly all issues. Remaining issues include:
-- In apps.py of checkout app : 
-   Issue: ```'checkout.signals' imported but unused```  
-   Justification: Despite the import being unused, it is necessary for the application's functionality. Therefore, this warning was disregarded.  
-- In webhooks.py on checkout app:
-   Issue: ```local variable 'e' is assigned to but never userd```   
-   Justification: The lint error arose due to a broadly caught exception. I opted to overlook this error.
-- In settings.py of the project's folder:
-   Issue: ```line too long (91 > 79 characters)```
+## Pep8 Online Testing  
+I am pleased to announce that the entire codebase of the project now fully adheres to PEP8 standards, as confirmed by [CI Python Linter](https://pep8ci.herokuapp.com/#). This compliance was achieved through careful code revision and improvements across various modules.
 
-   Justification: Altering the line length could disrupt password validation functionality, so this error was ignored.
+![Python Linter Results](readme-testing-files/testing/python-validator/python-result.png)    
+
+One notable challenge was addressing a line length linting error within the settings.py file, specifically in the ``AUTH_PASSWORD_VALIDATORS`` variable, which is crucial for AllAuth's password validation functionality. Initially, after consulting with a mentor, the decision was made to overlook this error as it seemed the lines couldn't be broken down without compromising functionality. However, a solution was later found to maintain both the functionality and adhere to PEP8 standards. The code was reformatted as follows:
+
+``````
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
+    },
+]
 ``````
 
-   AUTH_PASSWORD_VALIDATORS = [
-      {
-         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-      },
-      {
-         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-      },
-      {
-         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-      },
-      {
-         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-      },
-   ] 
-  
-  ``````
-   
-All other warnings, errors, and problems on VSCode's flake 8 are resolved.   
-To add more validation to the code, I also used [Pep8 Online](http://pep8online.com/checkresult), and all codes passed the PEP8 requirements.  
 <br/>
 
 ## **Lighthouse Testing**   
