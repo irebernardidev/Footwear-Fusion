@@ -1,81 +1,114 @@
 {% extends "base.html" %}
+
 {% load static %}
-{% block extra_title %} - FAQ Page{% endblock %}
+
+{% block extra_title %} 
+  - FAQ Page
+{% endblock %}
 
 {% block page_header %}
-<div class="navbar-offset"></div>
+  <div class="navbar-offset"></div>  
 {% endblock %}
 
 {% block content %}
-<section>
+
+  <section>
+
     <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="mt-5 mb-4 mb-sm-5 fw-bold text-uppercase">
-                    Frequently Asked Questions
-                </h2>
-            </div>
+
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="mt-5 mb-4 mb-sm-5 fw-bold text-uppercase">
+            Frequently Asked Questions
+          </h2>
+        </div>  
+      </div>
+
+      <div class="mt-1 mt-md-3">
+        
+        <div class="my-4">
+          <h5 class="fw-bold">
+            Q: What is the delivery timeline for orders?
+          </h5>
+          
+          <p>
+            A: Your order will embark on its journey to you within 3-10 business 
+            days, if you're in Europe. This includes the time needed for both 
+            processing and shipping We strive to get your order to you as 
+            swiftly as possible.  
+          </p>
         </div>
-        <div class="mt-1 mt-md-3">
-            <div class="my-4">
-                <h5 class="fw-bold">
-                    Q: What is the delivery timeline for orders?
-                </h5>
-                <p>
-                    A: Your order will embark on its journey to you within 3-10 business days, if you're in Europe.
-                    This includes the time needed for both processing and shipping
-                    We strive to get your order to you as swiftly as possible.
-                </p>
-            </div>
-            <div class="my-4">
-                <h5 class="fw-bold">
-                    Q: What is the process for returning an item?
-                </h5>
-                <p>
-                    A: We at Footwear Fusion prioritize your satisfaction and offer a 28-day return period 
-                    for any items that don't meet your expectations, as long as they remain in sellable condition. 
-                    To initiate a return, simply reach out to us via our contact form, mentioning your order number and the reason for the return. 
-                    We'll respond with a return label for you. If our original packaging isn't available, any secure, waterproof packaging will do. 
-                    You can even consolidate returns from multiple orders, just be sure to include all corresponding return notes in the parcel.
-                </p>
-            </div>
-            <div class="my-4">
-                <h5 class="fw-bold">
-                    Q: How can I confirm my order was successfully placed?
-                </h5>
-                <p>
-                    A: To verify your order, simply log into your account and check your purchase history. 
-                    If your order is listed there, rest assured we have received it and are in the process of getting it ready. 
-                    If it's not visible in your purchase history, please don't hesitate to get in touch with us for further assistance.
-                </p>
-            </div>
-            <div class="my-4">
-                <h5 class="fw-bold">
-                    Q: What payment methods do you accept?
-                </h5>
-                <p>
-                    A: We welcome payments through MasterCard, Visa, American Express, and Discovery. 
-                    Your security is paramount at Footwear Fusion, and we ensure the utmost protection of your information 
-                    through encrypted transmission, safeguarding any personal data.
-                </p>
-            </div>
-            <div class="my-4 pb-4">
-                <h5 class="fw-bold">
-                    Q: Is it possible to cancel or modify my order?
-                </h5>
-                <p>
-                    A: Once your order is confirmed, we move quickly to get it ready for shipment, 
-                    which means we're unable to make changes or cancel it.
-                    However, if you contact us immediately after placing the order, we'll do our best to accommodate your request.
-                </p>
-            </div>
+
+        <div class="my-4">
+          <h5 class="fw-bold">
+            Q: What is the process for returning an item?  
+          </h5>
+            
+          <p>
+            A: We at Footwear Fusion prioritize your satisfaction and offer a 
+            28-day return period for any items that don't meet your 
+            expectations, as long as they remain in sellable condition. To 
+            initiate a return, simply reach out to us via our contact form, 
+            mentioning your order number and the reason for the return. We'll 
+            respond with a return label for you. If our original packaging 
+            isn't available, any secure, waterproof packaging will do. You 
+            can even consolidate returns from multiple orders, just be sure 
+            to include all corresponding return notes in the parcel.
+          </p>
         </div>
-        <p>Still have questions? We're here to assist! Reach out to us for more information or help.</p>
-        <div class="text-center">
-            <a href="{% url 'contact' %}" class="btn btn-beige my-5">
-                Go to Contact Page
-            </a>
+
+        <div class="my-4">
+          <h5 class="fw-bold">
+            Q: How can I confirm my order was successfully placed?
+          </h5>
+            
+          <p>  
+            A: To verify your order, simply log into your account and check 
+            your purchase history. If your order is listed there, rest 
+            assured we have received it and are in the process of getting it 
+            ready. If it's not visible in your purchase history, please 
+            don't hesitate to get in touch with us for further assistance.
+          </p>
         </div>
+
+        <div class="my-4">
+          <h5 class="fw-bold">
+            Q: What payment methods do you accept? 
+          </h5>
+          
+          <p>
+            A: We welcome payments through MasterCard, Visa, American Express,  
+            and Discovery. Your security is paramount at Footwear Fusion, and 
+            we ensure the utmost protection of your information through 
+            encrypted transmission, safeguarding any personal data.
+          </p>
+        </div>
+
+        <div class="my-4 pb-4">
+          <h5 class="fw-bold">
+            Q: Is it possible to cancel or modify my order?
+          </h5>
+            
+          <p>
+            A: Once your order is confirmed, we move quickly to get it ready 
+            for shipment, which means we're unable to make changes or cancel 
+            it. However, if you contact us immediately after placing the 
+            order, we'll do our best to accommodate your request.  
+          </p>
+        </div>
+
+      </div>
+
+      <p>Still have questions? We're here to assist! Reach out to us for more information or help.</p>
+
+      <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-beige my-5">
+          Go to Contact Page
+        </a>
+      </div>
+
     </div>
-</section>
+  
+  </section>
+  
 {% endblock %}
