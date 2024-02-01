@@ -28,9 +28,7 @@ This site, which I developed for the Code Institute's Milestone Project 4, combi
    C. [Features to be Implemented in The Future](#features-to-be-implemented-in-the-future)
 4. [Testing](#testing)    
    - [Go to TESTING.md](TESTING.md)
-5. [Issues and Bugs](#issues-and-bugs)  
-   - [Solved Issues](#resolved-issues)  
-   - [Known Issues & Unsolved Bugs]()
+5. [Issues and Bugs](#issues-and-bugs)
 6. [Technology Used](#technology-used)
    - [Main Languanges](#main-languages) 
    - [Libraries and Frameworks](#libraries-and-frameworks)
@@ -163,14 +161,12 @@ The design distinctly differentiates the access levels between unregistered and 
 All the aforementioned functionalities are accessible only to users with a registered account.
 
 [Back to top &uarr;](#non-functional-requirements)  
-
 <br/>  
 
 ### **D. Skeleton Plane**  
 Using [Balsamiq](https://balsamiq.com/), wireframes were developed to outline the website's navigation and interface. These wireframes, specifically designed for desktop viewing, form the foundation upon which the interface will be adapted for various device sizes.
 
 👉 [View Footwear Fusion Wireframes here](readme-testing-files/readme/wireframes "The color scheme")
-
 <br/>
 
 #### **Color Scheme**  
@@ -452,9 +448,86 @@ The complete documentation of these tests is available for review 👉 [here](TE
 ## **Issues and Bugs**   
 ### **Resolved Issues**   
 During the website development process, I encountered a variety of challenges and bugs. Below, I've detailed some of the more complex issues I faced, along with the effective solutions I applied to resolve them.
-1. **Issue**: Implementing a feature where the heart icon on the top left of a product image turns red for products that are in the favorite list of the currently active user. This implementation proved challenging, particularly in verifying whether a product instance is included in the user's favorites queryset.
+1. **Issue**: For every registered user, on their profile page, there's a review section. This review section lists all products that the user has bought before, and are waiting to be reviewed. Once the user gives a review of a product, the product will disappear from this section.
+Therefore, for this section, I wanted to display only the products that are in the user's order history, and are not listed in the reviews database. This problem was rather complicated because you have to check in multiple tables, and the process is not straightforward.
+
+**Solution**:
+Based on my understanding, this is what came to my mind. In ```views.py```:
+
+```
+profile = get_object_or_404(UserProfile, user=request.user)
+reviews = Review.objects.filter(user=profile) 
+orders = profile.orders.all()
+```
+And in the template:
+
+```
+{% for order in orders %}
+   {% for item in order.lineitems.all %}
+      {% if item.product.id not in reviews %}
+         <!-- Display the products here -->
+         ...
+      {% endif %}
+   {% endfor %}
+{% endfor %}
+```
+
+The above solution didn't work. After a few hours of googling and implementing, I found this topic on Stack Overflow and learned about ```values_list()```.
+
+I then read the Django documentation about ```values_list```, which returns a QuerySet that returns single values (if using ```flat=True```). Using this method, I changed the reviews variable in views.py to:
+
+```
+reviews = Review.objects.filter(user=profile).values_list('product__id', flat=True)
+```
+So that the reviews variable will just return a list of ```product_id``` values.
+
+2. **Issue**: One major bug I ran into was being unable to import the blogs module in Django shell using ```import footwear_fusion.blogs```. This kept failing with a ModuleNotFoundError.
+After a lot of debugging, I discovered I could directly import blogs without the full parent app path and access the models like:
+
+```
+from blogs import models
+print(models)
+```
+
+This allowed me to workaround the issue. I added a comment in the codebase noting the odd blog import behavior and to just directly import blogs.
+To restore the lost blog data, I reloaded my blog post fixtures by running:
+
+```
+heroku run python manage.py loaddata blogs.json
+```
 
 
+After redeploying to Heroku, I confirmed the blogs now display correctly on my live site.
+Through methodical troubleshooting, I isolated the problem to just importing this one submodule, found usable workarounds, and got critical blog functionality restored.
+
+3. **Issue**: Stripe webhook handler bug:
+
+The issue was that after a Stripe API update, the payment intent object no longer had a ```charges``` attribute directly available. So my existing code to get billing details and order total was broken.
+To fix this, I imported the Stripe library and updated my ```payment_intent_succeeded``` method to:
+
+- Get the latest charge ID from the payment intent:
+
+
+```
+stripe_charge = stripe.Charge.retrieve(intent.latest_charge)`
+```
+- Extract billing details from the Charge object:
+
+```
+billing_details = stripe_charge.billing_details
+```
+- And the order total from the Charge amount:
+
+```
+grand_total = round(stripe_charge.amount / 100, 2)
+```
+
+
+By handling the updated Stripe objects, I was able to get the order information and keep webhook processing working after the API changes.
+The key was checking the updated Stripe documentation and adjusting my usage accordingly. Methodical debugging and research helped resolve the integration issue.
+
+
+[Back to top &uarr;](#15-contact-page)  
 <br/>  
 
 ## **TECHNOLOGY USED**  
@@ -886,3 +959,5 @@ I would like to thank the following people for their support and assistance with
 - My friends and family members who took time to test the website on various devices and provide feedback. Their input was extremely helpful for identifying issues.
 
 In addition, I'd like to acknowledge the Code Institute course material which equipped me with the key skills to build this project.
+
+[Back to top &uarr;](#table-of-contents)  

@@ -2,7 +2,7 @@
 
 🔗 [Back to the main README.md file](README.md "Link to README file")
 
-🔗 [View the live website here](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
+🔗 View the live website here: [Footwear Fusion](https://footwear-fusion-9bb895189ceb.herokuapp.com/)  
 
 🔗 [View the Repository](https://github.com/irebernardidev/Footwear-Fusion "Link to Repository")
 
@@ -291,32 +291,31 @@ For product deletion, I log in as admin, navigate to the 'Products' page or the 
 #### **Browsers Compatibility**   
 The website underwent testing across various browsers, including Google Chrome, Microsoft Edge, Opera, Mozilla Firefox, and Safari (iOS).
 
-**Chrome:**
 
-![Chrome test image](readme-testing-files/testing/chrome.png)
+| Browser                          | Compatibility            | Screenshot                |
+| ---------------------------------|--------------------------|---------------------------|
+| **Chrome**                        | ✅ Pass                  | ![Chrome](readme-testing-files/testing/chrome.png)           |
+| **Safari**                        | ✅ Pass                  | ![Show Image](readme-testing-files/testing/safari.png)            |
+| **Edge**                          | ✅ Pass                  | ![Show Image](readme-testing-files/testing/edge.png)           |
+| **Opera**                         | ✅ Pass                  | ![Show Image](readme-testing-files/testing/opera.png)           |
+| **Firefox**                       | ✅ Pass                  | ![Show Image](readme-testing-files/testing/firefox.png)           |
 
-**Safari:**
-
-![Safari test image](readme-testing-files/testing/safari.png)
-
-**Edge:**
-
-![Edge test image](readme-testing-files/testing/edge.png)
-
-**Opera:**
-
-![Opera test image](readme-testing-files/testing/opera.png)
-
-**Firefox:**
-
-![Firefox test image](readme-testing-files/testing/firefox.png)
 
 
 #### **Devices**  
 The site was viewed and assessed on multiple devices, such as:
 - Macbook Air 2017 13 inch screen.
 - Mobile: iPhone 14 Pro, iPhone XR, iPhone 12 Pro.
-- Friends and family members were asked to review the site on their devices and to point out any bugs and/or user experience issues.  
+- Friends and family members were asked to review the site on their devices and to point out any bugs and/or user experience issues.
+
+
+| Device                        | Compatibility/ Responsiveness  |
+| ------------------------------|-----------------|
+| Macbook Air 2017              | ✅ Pass         |
+| iPhone 14 Pro                 | ✅ Pass         |
+| iPhone XR                     | ✅ Pass         |
+| iPhone 12 Pro                 | ✅ Pass         |
+
 
 #### **Responsiveness**   
 Throughout development, the website's responsiveness on different devices was regularly tested using developer tools.
