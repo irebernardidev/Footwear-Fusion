@@ -4,8 +4,6 @@
 🔗 View the live website here: [Footwear Fusion](https://footwear-fusion-9bb895189ceb.herokuapp.com/)
 </br>  
 
-**Table of Contents**   
-
 ## **Introduction**
 Introducing Footwear Fusion, your go-to e-commerce destination for trendy shoes and stylish accessories! The platform offers a wide selection of footwear, complemented by an array of fashion-forward accessories like bags and wallets. Designed with user security in mind, Footwear Fusion incorporates robust authentication and Stripe payment integration, ensuring a secure and seamless shopping experience.
 
@@ -171,6 +169,8 @@ All the aforementioned functionalities are accessible only to users with a regis
 ### **D. Skeleton Plane**  
 Using [Balsamiq](https://balsamiq.com/), wireframes were developed to outline the website's navigation and interface. These wireframes, specifically designed for desktop viewing, form the foundation upon which the interface will be adapted for various device sizes.
 
+👉 [View Footwear Fusion Wireframes here](readme-testing-files/readme/wireframes "The color scheme")
+
 <br/>
 
 #### **Color Scheme**  
@@ -218,7 +218,7 @@ The database structure was conceptualized and outlined using [drawsql](https://d
    - The 'rating' initially reflects a retailer-provided quality assessment, which is updated as users review the product.
    - 'image' field for product visuals, and 'total_purchased' to track sales volume.
 
-- **User M odel**  
+- **User Model**  
    - Integral to the Django authentication system, this model stores user credentials, including username, email, and password. [django.contrib.auth](https://docs.djangoproject.com/en/4.0/ref/contrib/auth/).
 
 - **Order Model**
